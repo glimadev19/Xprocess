@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #295B8D;
+    border-bottom: 2px solid #ddd;
+}
+
+header img {
+    height: 50px;
+}
+
+/* Logo à esquerda */
+.menu {
+    height: 26px; /* Ajuste da altura da logo */
+    cursor: pointer;
+}
+
+/* Imagem central da empresa */
+.empresa {
+    height: 25px; /* Altura igual à logo */
+    border-radius: 50%; /* Faz a imagem ser circular */
+    padding: 5px; /* Espaçamento interno para destacar */
+}
+
+.empresa-user {
+    font-size: 16px; /* Aumentado para 20px */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    color: white;
+}
+
+/* Imagem do usuário à direita */
+.Usuário {
+    height: 45px; /* Altura igual à logo */
+    cursor: pointer; /* Indica que é clicável */
+    margin-top: 10px;
+}
+
+.container-botoes {
+    display: grid;
+    gap: 13px; /* Espaçamento entre os botões */
+    justify-content: start; /* Alinha os botões à esquerda */
+    grid-template-columns: repeat(2, auto); /* 2 colunas */
+    flex-wrap: wrap;
+    padding-left: 10px; /* Adiciona um espaço da esquerda */
+    margin-top: 10px;
+}
+
+.botao-com-imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    width: 124px;
+    height: 128px;
+    overflow: hidden;
+}
+
+.botao-com-imagens:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajustes para as imagens dentro do botão */
+.botao-com-imagens .imagem-topo {
+    max-width: 20px;
+    height: auto;
+    margin-bottom: 13px;
+}
+
+.botao-com-imagens .imagem-meio {
+    max-width: 58px;
+    height: auto;
+    margin-bottom: -1px;
+}
+
+.botao-com-imagens .texto-base {
+    font-size: 13px;
+    font-weight: bold;
+    color: #295B8D;
+    margin-top: auto; /* Empurra para o final sem aumentar o botão */
+}
