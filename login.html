@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,21 @@
         
         <a href="#" class="forgot-password">Esqueceu a senha?</a>
 
-        <button class="login-button">Entrar</button>
+        <button class="login-button" onclick="login()">Entrar</button>
     </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            window.location.href = "tela_inicial.html";
+        }
+    </script>
 </body>
 </html>
