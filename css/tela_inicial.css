@@ -54,7 +54,7 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 23px;
+    font-size: 23   px;
     font-weight: bold;
     color: #295B8D;
     position: relative; /* Permite ajustar sem afetar os outros elementos */
@@ -70,6 +70,14 @@ h4 {
     margin-top: -10px;
     position: relative;
     left: -10px;
+}
+#menu-container {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .container-botoes {
@@ -290,7 +298,7 @@ h4 {
 
 .caixa-total {
     width: 400px; /* Mesmo tamanho da .caixa-descricao */
-    max-width: 600px; /* Mantém uma largura máxima */
+    max-width: 350px; /* Mantém uma largura máxima */
     height: 130px; /* Ajuste conforme necessário */
     background-color: #295B8D; /* Mesma cor de fundo */
     border: 2px solid #ccc; /* Borda para destacar */
@@ -307,8 +315,254 @@ h4 {
 
 .caixa-total p {
     margin: 5px 0; /* Espaçamento entre os textos */
-    font-size: 58px;
-    left: -80px;
+    font-size: 40px;
+    left: -10px;
     position: relative;
     margin-top: 22px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+/* Fechar botão */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    width: 100%;
+    margin-top: -10px; /* Subindo o título */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Parte superior do Modal (horizontal) */
+.modal-top {
+    flex: 0 1 70px; /* Controla o tamanho do topo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parte inferior do Modal (restante) */
+.modal-bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: row; /* Divisão horizontal */
+}
+
+/* Dividir a parte inferior em 2 colunas verticais */
+.modal-left {
+    width: 48%;
+    padding-right: 10px;
+}
+
+.modal-right {
+    width: 48%;
+    padding-left: 10px;
+}
+
+/* Estilo das seções */
+.modal-section {
+    margin-bottom: 15px;
+}
+
+/* Campo de entrada de texto */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Estilo do botão */
+.finalizar-venda {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.finalizar-venda:hover {
+    background-color: #45a049;
+}
+
+/* Total */
+.total p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Organização dos itens dentro da parte direita do modal */
+.modal-right p {
+    margin-bottom: 10px;
+}
+
+/* Valor e botão "Finalizar Venda" na parte inferior direita */
+.valor-container {
+    margin-top: 40px;
+}
+
+/* Ajuste do layout para os campos na parte esquerda */
+.modal-left .modal-section {
+    margin-bottom: 10px;
+}
+
+/* Organização horizontal para Item, Forma de Pagamento e Valor */
+.modal-right .horizontal-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.horizontal-box div {
+    flex: 1;
+    text-align: center;
+}
+
+.horizontal-box div:not(:last-child) {
+    border-right: 2px solid #ddd;
+}
+    /* Modal de Vendedores */
+#vendedoresModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Fechar botão */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Subtítulo logo abaixo do título */
+.subtitulo {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilo para a lista de vendedores */
+.vendedores-list {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Estilo de cada item da lista de vendedores */
+.vendedores-item {
+    background-color: #f4f4f4; /* Cor de fundo da caixinha */
+    padding: 10px;
+    margin: 5px 0;  /* Espaçamento entre os itens */
+    text-align: center;  /* Centraliza o texto */
+    font-size: 16px;
+    display: inline-block;  /* Faz com que fiquem organizados em linha */
+    width: 100%;
+}
+
+/* Remover borda para as caixinhas */
+.vendedores-item {
+    border: none;
+}
+
+/* Estilo para o rodapé das instruções */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;  /* Espaça as instruções para os dois lados */
+    margin-top: 20px;
+}
+
+/* Estilo das instruções */
+.instruction {
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    width: 48%;
+    border-radius: 5px;  /* Bordas arredondadas */
+    margin: 0;
+}
+
+/* Instrução do lado esquerdo */
+.left {
+    text-align: left;
+}
+
+/* Instrução do lado direito */
+.right {
+    text-align: right;
 }
