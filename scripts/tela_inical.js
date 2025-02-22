@@ -89,3 +89,13 @@ function showVendedoresModal() {
         vendedoresList.appendChild(vendedorItem);
     });
 }
+
+function alterarQuantidade(valor) {
+    let quantidadeElemento = document.getElementById("quantidade");
+    let quantidade = parseInt(quantidadeElemento.innerText);
+    
+    quantidade += valor;
+    if (quantidade < 0) quantidade = 0;
+    
+    quantidadeElemento.innerText = quantidade;
+}
