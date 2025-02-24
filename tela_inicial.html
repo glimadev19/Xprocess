@@ -1,68 +1,65 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial</title>
     <link rel="stylesheet" href="./css/tela_inicial.css">
 </head>
+
 <body>
     <header>
-        <img class="menu" src="./imgs/menu.png" alt="Ícone de Menu">
+        <img class="menu" id="menu-toggle" src="./imgs/menu.png" alt="Ícone de Menu">
         <div class="empresa">
             <div class="empresa-user">Empresa</div>
         </div>
         <img class="Usuário" src="./imgs/usuário-tela-inicial.png" alt="Ícone de Usuário">
     </header>
 
-    <div class="container-botoes">
-        <button class="botao-com-imagens">
-            <img src="./imgs/F1.png" alt="F1" class="imagem-topo">
-            <img src="./imgs/imagem-f1.png" alt="Caixa" class="imagem-meio">
-            <span class="texto-base">Caixa</span>
-        </button>
-    
-        <button class="botao-com-imagens">
-            <img src="./imgs/F2.png" alt="F2" class="imagem-topo">
-            <img src="./imgs/imagem-f2.png" alt="Caixa" class="imagem-meio">
-            <span class="texto-base">Finalizar Venda</span>
-        </button>
-
-        <button class="botao-com-imagens">
-            <img src="./imgs/F5.png" alt="" class="imagem-topo">
-            <img src="./imgs/imagem-f5.png" alt="" class="imagem-meio">
-            <span class="texto-base">Modalidade</span>
-        </button>
-
-        <button class="botao-com-imagens">
-            <img src="./imgs/F7.png" alt="" class="imagem-topo">
-            <img src="./imgs/imagem-f7.png" alt="" class="imagem-meio">
-            <span class="texto-base">Vendedor</span>
-        </button>
-
-        <button class="botao-com-imagens">
-            <img src="./imgs/F9.png" alt="" class="imagem-topo">
-            <img src="./imgs/imagem-f9.png" alt="" class="imagem-meio">
-            <span class="texto-base">Cliente</span>
-        </button>
-
-        <button class="botao-com-imagens">
-            <img src="./imgs/F10.png" alt="" class="imagem-topo">
-            <img src="./imgs/imagem-f10.png" alt="" class="imagem-meio">
-            <span class="texto-base">Buscar</span>
-        </button>
-
-        <button class="botao-com-imagens">
-            <img src="./imgs/F11.png" alt="" class="imagem-topo">
-            <img src="./imgs/imagem-f11.png" alt="" class="imagem-meio">
-            <span class="texto-base">Venda Assistida</span>
-        </button>
-
-        <button class="botao-com-imagens">
-            <img src="./imgs/F12.png" alt="" class="imagem-topo">
-            <img src="./imgs/imagem-f12.png" alt="" class="imagem-meio">
-            <span class="texto-base">Carga Completa</span>
-        </button>
+    <!-- Container que será ocultado ao clicar no menu -->
+    <div id="menu-container">
+        <div class="container-botoes">
+            <button class="botao-com-imagens">
+                <img src="./imgs/F1.png" alt="F1" class="imagem-topo">
+                <img src="./imgs/caixa.png" alt="Caixa" class="imagem-meio">
+                <span class="texto-base">Caixa</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F2.png" alt="F2" class="imagem-topo">
+                <img src="./imgs/imagem-f2.png" alt="Caixa" class="imagem-meio">
+                <span class="texto-base">Finalizar Venda</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F5.png" alt="" class="imagem-topo">
+                <img src="./imgs/imagem-f5.png" alt="" class="imagem-meio">
+                <span class="texto-base">Modalidade</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F7.png" alt="" class="imagem-topo">
+                <img src="./imgs/imagem-f7.png" alt="" class="imagem-meio">
+                <span class="texto-base">Vendedor</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F9.png" alt="" class="imagem-topo">
+                <img src="./imgs/imagem-f9.png" alt="" class="imagem-meio">
+                <span class="texto-base">Cliente</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F10.png" alt="" class="imagem-topo">
+                <img src="./imgs/imagem-f10.png" alt="" class="imagem-meio">
+                <span class="texto-base">Buscar</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F11.png" alt="" class="imagem-topo">
+                <img src="./imgs/imagem-f11.png" alt="" class="imagem-meio">
+                <span class="texto-base">Venda Assistida</span>
+            </button>
+            <button class="botao-com-imagens">
+                <img src="./imgs/F12.png" alt="" class="imagem-topo">
+                <img src="./imgs/imagem-f12.png" alt="" class="imagem-meio">
+                <span class="texto-base">Carga Completa</span>
+            </button>
+        </div>
     </div>
 
     <div class="descrição-container">
@@ -73,7 +70,6 @@
             <p>Desconto: R$ 0,00</p>
             <p>Acrés. Adic.: R$ 0,00</p>
             <p>Serv/Outros: R$ 0,00</p>
-
             <div class="botoes-direita">
                 <button class="botao-pequeno">
                     <img src="./imgs/lixeira.png" alt="Ícone 1">
@@ -92,110 +88,111 @@
         </div>
     </div>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            
-            <!-- Parte superior do Modal -->
-            <div class="modal-top">
-                <h2>Finalizar Venda</h2> <!-- Título centralizado -->
-            </div>
-    
-            <!-- Parte inferior do Modal (dividida em 2 colunas) -->
-            <div class="modal-bottom">
-                <!-- Coluna da Esquerda -->
-                <div class="modal-left">
-                    <div class="modal-section">
-                        <p><strong>SubTotal</strong></p>
-                        <input type="text" class="input-field" value="R$ 0,00" />
-                    </div>
-                    <div class="modal-section">
-                        <p><strong>Descontos</strong></p>
-                        <input type="text" class="input-field" value="R$ 0,00" />
-                    </div>
-                    <div class="modal-section">
-                        <p><strong>Restante a Pagar</strong></p>
-                        <input type="text" class="input-field" value="R$ 0,00" />
-                    </div>
-                    <div class="modal-section">
-                        <p><strong>Troco</strong></p>
-                        <input type="text" class="input-field" value="R$ 0,00" />
-                    </div>
-                    <div class="modal-section">
-                        <p><strong>ESC = Cancelar Pagamento</strong></p>
-                    </div>
-                </div>
-    
-                <!-- Coluna da Direita -->
-                <div class="modal-right">
-                    <div class="horizontal-box">
-                        <div>
-                            <p><strong>Item</strong></p>
-                            <p>Item A</p> <!-- Exemplo de item -->
-                        </div>
-                        <div>
-                            <p><strong>Forma de Pagamento</strong></p>
-                            <p>Cartão</p> <!-- Exemplo de forma de pagamento -->
-                        </div>
-                        <div>
-                            <p><strong>Valor</strong></p>
-                            <p>R$ 100,00</p> <!-- Exemplo de valor -->
-                        </div>
-                    </div>
-    
-                    <!-- Valor e botão "Finalizar Venda" -->
-                    <div class="valor-container">
-                        <p><strong>Valor</strong></p>
-                        <input type="text" class="input-field" value="R$ 0,00" />
-                        <button class="finalizar-venda">Finalizar Venda</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal de Lista de Vendedores -->
-    <div id="vendedoresModal" class="modal">
-        <div class="modal-content">
-            <span id="closeVendedoresModal" class="close">&times;</span>
-            <h2>Lista de Vendedores</h2>
-            <p class="subtitulo">Código | Vendedor</p> <!-- Subtítulo explicando a estrutura da lista -->
-            <div id="vendedores-list" class="vendedores-list">
-                <!-- A lista estará vazia, mas a estrutura de Código | Vendedor será visível -->
-                <div class="vendedores-item">1 | Vendedor 1</div>
-                <div class="vendedores-item">2 | Vendedor 2</div>
-                <div class="vendedores-item">3 | Vendedor 3</div>
-                <div class="vendedores-item">4 | Vendedor 4</div>
-            </div>
-            <div class="modal-footer">
-                <div class="instruction left">ESC = Fechar</div>
-                <div class="instruction right">ENTER = Selecionar Vendedor</div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="area-item">
-        <h4>(Nome do Item)</h4>
-        <div class="espaco-em-branco">
-            <p>(Imagem do Item)</p>
-            <button class="botao-imagem">
-                <img src="./imgs/lixeira.png" alt="Imagem do botão">
-            </button>
-        </div>  
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
         
-        <button class="botao-imagem menos-botao" onclick="alterarQuantidade(-1)">
-            <img src="./imgs/menos.png" alt="Ícone de Menos">
-        </button>
+        <!-- Parte superior do Modal -->
+        <div class="modal-top">
+            <h2>Finalizar Venda</h2> <!-- Título centralizado -->
+        </div>
 
-        <span id="quantidade">0</span>
+        <!-- Parte inferior do Modal (dividida em 2 colunas) -->
+        <div class="modal-bottom">
+            <!-- Coluna da Esquerda -->
+            <div class="modal-left">
+                <div class="modal-section">
+                    <p><strong>SubTotal</strong></p>
+                    <input type="text" class="input-field" value="R$ 0,00" />
+                </div>
+                <div class="modal-section">
+                    <p><strong>Descontos</strong></p>
+                    <input type="text" class="input-field" value="R$ 0,00" />
+                </div>
+                <div class="modal-section">
+                    <p><strong>Restante a Pagar</strong></p>
+                    <input type="text" class="input-field" value="R$ 0,00" />
+                </div>
+                <div class="modal-section">
+                    <p><strong>Troco</strong></p>
+                    <input type="text" class="input-field" value="R$ 0,00" />
+                </div>
+                <div class="modal-section">
+                    <p><strong>ESC = Cancelar Pagamento</strong></p>
+                </div>
+            </div>
 
-        <button class="botao-imagem mais-botao" onclick="alterarQuantidade(1)">
-            <img src="./imgs/mais.png" alt="Ícone de Mais">
-        </button>
+            <!-- Coluna da Direita -->
+            <div class="modal-right">
+                <div class="horizontal-box">
+                    <div>
+                        <p><strong>Item</strong></p>
+                        <p>Item A</p> <!-- Exemplo de item -->
+                    </div>
+                    <div>
+                        <p><strong>Forma de Pagamento</strong></p>
+                        <p>Cartão</p> <!-- Exemplo de forma de pagamento -->
+                    </div>
+                    <div>
+                        <p><strong>Valor</strong></p>
+                        <p>R$ 100,00</p> <!-- Exemplo de valor -->
+                    </div>
+                </div>
 
-        <img src="./imgs/logo.png" alt="Imagem Logo">
+                <!-- Valor e botão "Finalizar Venda" -->
+                <div class="valor-container">
+                    <p><strong>Valor</strong></p>
+                    <input type="text" class="input-field" value="R$ 0,00" />
+                    <button class="finalizar-venda">Finalizar Venda</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <script src="./scripts/tela_inicial.js" defer></script>
+<!-- Modal de Lista de Vendedores -->
+<div id="vendedoresModal" class="modal">
+    <div class="modal-content">
+        <span id="closeVendedoresModal" class="close">&times;</span>
+        <h2>Lista de Vendedores</h2>
+        <p class="subtitulo">Código | Vendedor</p> <!-- Subtítulo explicando a estrutura da lista -->
+        <div id="vendedores-list" class="vendedores-list">
+            <!-- A lista estará vazia, mas a estrutura de Código | Vendedor será visível -->
+            <div class="vendedores-item">1 | Vendedor 1</div>
+            <div class="vendedores-item">2 | Vendedor 2</div>
+            <div class="vendedores-item">3 | Vendedor 3</div>
+            <div class="vendedores-item">4 | Vendedor 4</div>
+        </div>
+        <div class="modal-footer">
+            <div class="instruction left">ESC = Fechar</div>
+            <div class="instruction right">ENTER = Selecionar Vendedor</div>
+        </div>
+    </div>
+</div>
+<div class="area-item">
+    <h4>(Nome do Item)</h4>
+    <div class="espaco-em-branco">
+        <p>(Imagem do Item)</p>
+        <button class="botao-imagem">
+            <img src="./imgs/lixeira.png" alt="Imagem do botão">
+        </button>
+    </div>  
+    
+    <button class="botao-imagem menos-botao" onclick="alterarQuantidade(-1)">
+        <img src="./imgs/menos.png" alt="Ícone de Menos">
+    </button>
+
+    <span id="quantidade">0</span>
+
+    <button class="botao-imagem mais-botao" onclick="alterarQuantidade(1)">
+        <img src="./imgs/mais.png" alt="Ícone de Mais">
+    </button>
+
+    <img src="./imgs/logo.png" alt="Imagem Logo">
+</div>
+
+    <script src="./scripts/tela_inical.js"></script>
 </body>
+
 </html>
