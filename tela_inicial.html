@@ -89,6 +89,103 @@
         </div>
     </div>
 
+
+<!-- CaixaModalopen -->
+<div id="CaixaModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="CaixaModal-header">
+            <h2>Abrir Caixa</h2> <!-- Título -->
+        </div>
+
+        <div class="CaixaModal-bottom">
+            <!-- Coluna da Esquerda -->
+            <div class="CaixaModal-left">
+                <div class="modal-section">
+                    <label for="pdv">PDV</label>
+                    <input type="text" id="pdv" placeholder="Digite o PDV">
+                </div>
+                
+                <div class="modal-section">
+                    <label for="dataHora">Data/Horário</label>
+                    <input type="text" id="dataHora" placeholder="Digite a Data e Horário">
+                </div>
+
+                <div class="instructions">
+                    <span>ESC = FECHAR</span>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita -->
+            <div class="CaixaModal-right">
+                <div class="modal-section">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" placeholder="Digite o Usuário">
+                </div>
+                
+                <div class="modal-section">
+                    <label for="saldo">Saldo em Caixa (R$)</label>
+                    <input type="text" id="saldo" placeholder="Digite o Saldo">
+                </div>
+                <div class="instructions">
+                    <span>ENTER = ABRIR CAIXA</span>
+                </div>
+            </div>
+            <!-- Botão Fechar Caixa -->
+            <button id="fecharCaixaBtn">Fechar Caixa</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Fechar Caixa -->
+<div id="CaixaModalfechada" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- Parte superior do Modal (Título) -->
+        <div class="CaixaModalfechada-header">
+            <h2>Fechar Caixa</h2> <!-- Título -->
+        </div>
+
+        <!-- Parte inferior do Modal (dividida em 2 colunas) -->
+        <div class="CaixaModalfechada-bottom">
+            <div class="CaixaModalfechada-left">
+                <!-- Coluna da Esquerda -->
+                <div class="modal-section">
+                    <label for="pdv">PDV</label>
+                    <input type="text" id="pdv" placeholder="Digite o PDV">
+                </div>
+                
+                <div class="modal-section">
+                    <label for="dataHora">Data/Horário</label>
+                    <input type="text" id="dataHora" placeholder="Digite a Data e Horário">
+                </div>
+
+                <div class="instructions">
+                    <span>ESC = FECHAR</span>
+                </div>
+            </div>
+
+            <div class="CaixaModalfechada-right">
+                <!-- Coluna da Direita -->
+                <div class="modal-section">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" placeholder="Digite o Usuário">
+                </div>
+                
+                <div class="modal-section">
+                    <label for="saldo">Saldo em Caixa (R$)</label>
+                    <input type="text" id="saldo" placeholder="Digite o Saldo">
+                </div>
+                <div class="instructions">
+                    <span>ENTER = Fechar CAIXA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal -->
 <div id="myModal" class="modal">
     <div class="modal-content">
