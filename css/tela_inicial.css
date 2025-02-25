@@ -568,3 +568,77 @@ h4 {
 .right {
     text-align: right;
 }
+
+/* Estilo do Modal - CaixaModal e CaixaModalfechada */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Adiciona um espaço no topo para o título */
+}
+
+.CaixaModal-header h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 24px; /* Tamanho maior para o título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.CaixaModal-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Adiciona espaçamento em cima de tudo */
+}
+
+.CaixaModal-left,
+.CaixaModal-right {
+    width: 48%; /* Controla a largura de cada coluna */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold; /* Deixa o identificador mais destacado */
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não altere o tamanho do input */
+}
+
+.instructions {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Estilo para o botão de Fechar Caixa dentro do modal */
+#fecharCaixaBtn {
+    position: absolute;  /* Faz o botão ficar dentro do modal */
+    bottom: 20px;        /* Ajuste a distância para 20px do fundo do modal */
+    left: 50%;           /* Centraliza o botão horizontalmente */
+    transform: translateX(-50%);  /* Corrige o alinhamento para centralizar */
+    background-color: #6200ea;  /* Cor de fundo do botão */
+    color: white;     /* Cor do texto */
+    padding: 5px 15px;  /* Tamanho do botão (pequeno) */
+    border: none;     /* Remove a borda */
+    border-radius: 5px;  /* Cantos arredondados */
+    font-size: 14px;   /* Tamanho de fonte pequeno */
+    cursor: pointer;  /* Mostra o ponteiro do mouse */
+    transition: background-color 0.3s ease;  /* Efeito ao passar o mouse */
+}
+
+#fecharCaixaBtn:hover {
+    background-color: #3700b3;  /* Cor mais escura ao passar o mouse */
+}
+
+#fecharCaixaBtn:focus {
+    outline: none;  /* Remove o contorno do foco */
+    box-shadow: 0 0 0 2px #3700b3;  /* Adiciona um destaque quando o botão é focado */
+}
