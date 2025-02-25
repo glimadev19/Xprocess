@@ -96,7 +96,7 @@
         <span class="close">&times;</span>
 
         <div class="CaixaModal-header">
-            <h2>Abrir Caixa</h2> <!-- Título -->
+            <h2>Abertura de Caixa</h2> <!-- Título -->
         </div>
 
         <div class="CaixaModal-bottom">
@@ -145,7 +145,7 @@
 
         <!-- Parte superior do Modal (Título) -->
         <div class="CaixaModalfechada-header">
-            <h2>Fechar Caixa</h2> <!-- Título -->
+            <h2>Fechamento de Caixa</h2> <!-- Título -->
         </div>
 
         <!-- Parte inferior do Modal (dividida em 2 colunas) -->
@@ -245,6 +245,171 @@
                     <button class="finalizar-venda">Finalizar Venda</button>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Informar Cliente -->
+<div id="informarClienteModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- Parte superior do Modal (Título) -->
+        <div class="modal-header">
+            <h2>Informar Cliente</h2> <!-- Título -->
+        </div>
+
+        <!-- Parte inferior do Modal (dividida em 2 colunas) -->
+        <div class="modal-bottom">
+            <!-- Coluna da Esquerda -->
+            <div class="modal-left">
+                <div class="modal-section">
+                    <label for="cpfCnpj">CPF/CNPJ</label>
+                    <input type="text" id="cpfCnpj" placeholder="Digite o CPF/CNPJ">
+                </div>
+                
+                <div class="modal-section">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" placeholder="Digite o Telefone">
+                </div>
+
+                <div class="modal-section">
+                    <label for="celular">Celular</label>
+                    <input type="text" id="celular" placeholder="Digite o Celular">
+                </div>
+            </div>
+
+            <!-- Coluna da Direita -->
+            <div class="modal-right">
+                <div class="modal-section">
+                    <label for="cliente">Cliente</label>
+                    <input type="text" id="cliente" placeholder="Digite o Nome do Cliente">
+                </div>
+
+                <div class="instructions">
+                    <span>ESC = Rechar</span>
+                    <span>ENTER = Gravar</span>
+                    <button id="informarMaisDadosBtn">Informar mais Dados</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Pesquisar Produto -->
+<div id="pesquisarProdutoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- Parte superior do Modal (Título) -->
+        <div class="modal-header">
+            <h2>Pesquisar Produto</h2> <!-- Título -->
+        </div>
+
+        <!-- Parte inferior do Modal (dividida em 2 colunas) -->
+        <div class="modal-bottom">
+            <!-- Coluna da Esquerda -->
+            <div class="modal-left">
+                <div class="modal-section">
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigo" placeholder="Digite o Código">
+                </div>
+                
+                <div class="modal-section">
+                    <label for="codigoBarras">Código de Barras</label>
+                    <input type="text" id="codigoBarras" placeholder="Digite o Código de Barras">
+                </div>
+
+                <div class="modal-section">
+                    <label for="descricao">Descrição do Produto</label>
+                    <input type="text" id="descricao" placeholder="Digite a Descrição">
+                </div>
+
+                <div class="instructions">
+                    <span>ESC = Rejeitar</span>
+                    <span>ENTER = Selecionar Produto</span>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita -->
+            <div class="modal-right">
+                <div class="modal-section">
+                    <h3>Resultados da Pesquisa</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Cód. de Barras</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Informar mais Dados -->
+<div id="informarMaisDadosModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- Título do Modal -->
+        <div class="modal-header">
+            <h2>Dados do Cliente</h2>
+        </div>
+
+        <!-- Corpo do Modal -->
+        <div class="modal-body">
+            <table>
+                <tr>
+                    <th>CPF/CNPJ</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="cpfCnpj" placeholder="Digite o CPF/CNPJ"></td>
+                    <td><input type="text" id="nome" placeholder="Digite o Nome"></td>
+                    <td><input type="text" id="telefone" placeholder="Digite o Telefone"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <th>Estado</th>
+                    <th>Endereço</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="email" placeholder="Digite o Email"></td>
+                    <td><input type="text" id="estado" placeholder="Digite o Estado"></td>
+                    <td><input type="text" id="endereco" placeholder="Digite o Endereço"></td>
+                </tr>
+                <tr>
+                    <th>Bairro</th>
+                    <th>Número</th>
+                    <th>Complemento</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="bairro" placeholder="Digite o Bairro"></td>
+                    <td><input type="text" id="numero" placeholder="Digite o Número"></td>
+                    <td><input type="text" id="complemento" placeholder="Digite o Complemento"></td>
+                </tr>
+                <tr>
+                    <th>Município</th>
+                    <th>CEP</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="municipio" placeholder="Digite o Município"></td>
+                    <td><input type="text" id="cep" placeholder="Digite o CEP"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Rodapé do Modal -->
+        <div class="modal-footer">
+            <button id="limparBtn">Limpar Informações</button>
+            <button id="gravarBtn">Gravar</button>
+            <span>ESC = Fechar</span>
         </div>
     </div>
 </div>
