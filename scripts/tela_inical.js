@@ -70,17 +70,6 @@ function showVendedoresModal() {
     });
 }
 
-// Função para alterar a quantidade
-function alterarQuantidade(valor) {
-    let quantidadeElemento = document.getElementById("quantidade");
-    let quantidade = parseInt(quantidadeElemento.innerText) || 0;
-
-    quantidade += valor;
-    if (quantidade < 0) quantidade = 0;
-
-    quantidadeElemento.innerText = quantidade;
-}
-
 // Função para limpar os campos do modal
 function limparCampos() {
     document.getElementById("cpfCnpj").value = "";
@@ -234,3 +223,22 @@ document.getElementById("limparBtn").onclick = limparCampos;
 
 // Função para gravar dados no modal de Informar Cliente
 document.getElementById("gravarBtn").onclick = gravarDados;
+
+function alterarQuantidade(valor) {
+    let quantidadeElemento = document.getElementById("quantidade");
+    let quantidade = parseInt(quantidadeElemento.innerText) || 0;
+
+    quantidade += valor;
+    if (quantidade < 0) quantidade = 0;
+
+    quantidadeElemento.innerText = quantidade;
+}
+
+// Adiciona um evento para capturar as teclas "-" e "+"
+document.addEventListener("keydown", function (event) {
+    if (event.key === "-") {
+        alterarQuantidade(-1);
+    } else if (event.key === "+" || event.key === "=") { // "=" porque no teclado numérico ABNT2 "+" está no shift do "="
+        alterarQuantidade(1);
+    }
+});
