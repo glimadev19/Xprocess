@@ -46,7 +46,8 @@ header img {
 }
 
 h2 {
-    margin-top: 60px; /* Adiciona espaçamento abaixo do h2 */
+    margin-top: 2rem;
+    margin-left: 2rem; 
     font-family: 'Pridi';
     font-size: 22px;
     color: #5C84AC;
@@ -54,12 +55,12 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: bold;
     color: #295B8D;
     position: relative; /* Permite ajustar sem afetar os outros elementos */
-    top: -150px; /* Ajuste para subir apenas o h3 */
-    left: -75px;
+    top: -15rem; /* Ajuste para subir apenas o h3 */
+    left: 10rem;
     font-family: 'Pridi';
 }
 
@@ -77,8 +78,8 @@ h4 {
     gap: 13px; /* Espaçamento entre os botões */
     justify-content: start; /* Alinha os botões à esquerda */
     grid-template-columns: repeat(2, auto); /* 2 colunas */
-    padding-left: 10px; /* Adiciona um espaço da esquerda */
-    margin-top: 10px;
+    padding-left: 2rem; /* Adiciona um espaço da esquerda */
+    margin-top: 2rem;
     width: fit-content; /* Ajusta a largura ao conteúdo */
 }
 
@@ -131,7 +132,7 @@ h4 {
     border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 15px; /* Espaçamento interno */
-    margin-top: 10px; /* Espaço entre o h2 e a caixa */
+    margin: 2rem; /* Espaço entre o h2 e a caixa */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
     position: relative; /* Para permitir posicionamento absoluto dentro dela */
     gap: 15px;
@@ -308,20 +309,20 @@ h4 {
 }
 
 .caixa-total {
-    width: 400px; /* Mesmo tamanho da .caixa-descricao */
-    max-width: 600px; /* Mantém uma largura máxima */
-    height: 130px; /* Ajuste conforme necessário */
+    width: 25rem; /* Mesmo tamanho da .caixa-descricao */
+    max-width: 37.5rem; /* Mantém uma largura máxima */
+    height: 8rem; /* Ajuste conforme necessário */
     background-color: #295B8D; /* Mesma cor de fundo */
     border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 10px; /* Espaçamento interno */
-    margin-top: -154px; /* Ajuste para alinhar com o h3 */
+    margin-top: -13rem; /* Ajuste para alinhar com o h3 */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
     text-align: center; /* Alinha o texto ao centro */
     font-weight: bold;
     color: white;
     position: relative;
-    left: 550px; /* Ajuste para alinhar com o h3 */
+    left: 40rem; /* Ajuste para alinhar com o h3 */
 }
 
 .caixa-total p {
