@@ -14,6 +14,7 @@ header {
     padding: 10px 20px;
     background-color: #295B8D;
     border-bottom: 2px solid #ddd;
+    z-index: 10;
 }
 
 header img {
@@ -24,6 +25,125 @@ header img {
 .menu {
     height: 26px; /* Ajuste da altura da logo */
     cursor: pointer;
+}
+
+#menu-lateral {
+    position: absolute;
+    top: 90px; /* Ajuste para ficar abaixo do header */
+    left: -250px; /* Inicialmente fora da tela */
+    width: 250px;
+    height: calc(100% - 90px); /* Ajuste para ocupar o espaço corretamente */
+    background-color: white;
+    color: #295B8D;
+    transition: left 0.6s ease, box-shadow 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Garante que o conteúdo fique dentro do menu */
+}
+
+/* Quando o menu estiver aberto */
+#menu-lateral.aberto {
+    left: 0px; /* Posiciona o menu na tela */
+    box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra quando aberto */
+}
+
+/* Estilo para o conteúdo dentro do menu */
+.menu-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduzi o espaço entre os itens */
+}
+
+.menu-lateral h2 {
+    margin: 0 0 40px 0; /* Adiciona espaçamento abaixo do título */
+    color: #295B8D;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.menu-opcoes h3 {
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 30px;
+    margin-top: 208px;
+    left: -90px;
+}
+
+.menu-opcoes h4 {
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 20px;
+    margin-top: 5px;
+    left: -30px;
+}
+
+.menu-opcoes h5 {
+    position: relative;
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 20px;
+    margin-top: 10px;
+    left: -30px;
+}
+
+.menu-opcoes p.subItem {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: 5px; /* Aumente esse valor para descer mais */
+    text-align: left;
+}
+
+.menu-opcoes p.subItem + p.subItem {
+    margin-top: 5px;
+}
+
+.menu-opcoes p.subitens {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: 5px; /* Aumente esse valor para descer mais */
+    text-align: left;
+}
+
+.menu-opcoes p.subitens + p.subitens {
+    margin-top: 5px;
+}
+
+/* Estilo para os novos textos <p> como subitens */
+.menu-opcoes p.subitem {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: -240px; /* Ajuste para aproximar "Abrir" mais do título */
+    text-align: left;
+}
+
+/* Para garantir que o novo subitem apareça abaixo de "Abrir" */
+.menu-opcoes p.subitem + p.subitem {
+    margin-top: 5px; /* Ajuste para deixar um pequeno espaçamento entre "Abrir" e o novo subitem */
 }
 
 /* Imagem central da empresa */
@@ -566,4 +686,78 @@ h4 {
 /* Instrução do lado direito */
 .right {
     text-align: right;
+}
+
+/* Estilo do Modal - CaixaModal e CaixaModalfechada */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Adiciona um espaço no topo para o título */
+}
+
+.CaixaModal-header h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 24px; /* Tamanho maior para o título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.CaixaModal-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Adiciona espaçamento em cima de tudo */
+}
+
+.CaixaModal-left,
+.CaixaModal-right {
+    width: 48%; /* Controla a largura de cada coluna */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold; /* Deixa o identificador mais destacado */
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não altere o tamanho do input */
+}
+
+.instructions {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Estilo para o botão de Fechar Caixa dentro do modal */
+#fecharCaixaBtn {
+    position: absolute;  /* Faz o botão ficar dentro do modal */
+    bottom: 20px;        /* Ajuste a distância para 20px do fundo do modal */
+    left: 50%;           /* Centraliza o botão horizontalmente */
+    transform: translateX(-50%);  /* Corrige o alinhamento para centralizar */
+    background-color: #6200ea;  /* Cor de fundo do botão */
+    color: white;     /* Cor do texto */
+    padding: 5px 15px;  /* Tamanho do botão (pequeno) */
+    border: none;     /* Remove a borda */
+    border-radius: 5px;  /* Cantos arredondados */
+    font-size: 14px;   /* Tamanho de fonte pequeno */
+    cursor: pointer;  /* Mostra o ponteiro do mouse */
+    transition: background-color 0.3s ease;  /* Efeito ao passar o mouse */
+}
+
+#fecharCaixaBtn:hover {
+    background-color: #3700b3;  /* Cor mais escura ao passar o mouse */
+}
+
+#fecharCaixaBtn:focus {
+    outline: none;  /* Remove o contorno do foco */
+    box-shadow: 0 0 0 2px #3700b3;  /* Adiciona um destaque quando o botão é focado */
 }
