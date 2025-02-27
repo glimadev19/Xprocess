@@ -316,6 +316,32 @@ h4 {
     height: auto;
 }
 
+.informacoes-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -400px; /* Ajuste esse valor conforme necessário */
+}
+
+.informacoes-produto p {
+    color: white;
+    font-family: 'Pridi', sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px; /* Reduz a distância do texto para o input */
+}
+
+.informacoes-produto input {
+    width: 100%;
+    padding: 25px; /* Aumenta o espaçamento interno */
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Deixa os inputs arredondados */
+    font-size: 16px; /* Aumenta o tamanho do texto dentro da caixa */
+    transition: 0.3s ease-in-out;
+    outline: none;
+    background: #f9f9f9; /* Fundo levemente cinza */
+    margin-top: 0; /* Remove qualquer espaçamento extra acima do input */
+}
+
 .espaco-em-branco {
     height: 15rem; /* Ajuste a altura conforme necessário */
     width: 80%; /* Preenche toda a largura disponível */
