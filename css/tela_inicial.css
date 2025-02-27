@@ -13,6 +13,7 @@ header {
     padding: 10px 20px;
     background-color: #295B8D;
     border-bottom: 2px solid #ddd;
+    z-index: 10;
 }
 
 header img {
@@ -23,6 +24,125 @@ header img {
 .menu {
     height: 26px; /* Ajuste da altura da logo */
     cursor: pointer;
+}
+
+#menu-lateral {
+    position: absolute;
+    top: 90px; /* Ajuste para ficar abaixo do header */
+    left: -250px; /* Inicialmente fora da tela */
+    width: 250px;
+    height: calc(100% - 90px); /* Ajuste para ocupar o espaço corretamente */
+    background-color: white;
+    color: #295B8D;
+    transition: left 0.6s ease, box-shadow 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Garante que o conteúdo fique dentro do menu */
+}
+
+/* Quando o menu estiver aberto */
+#menu-lateral.aberto {
+    left: 0px; /* Posiciona o menu na tela */
+    box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra quando aberto */
+}
+
+/* Estilo para o conteúdo dentro do menu */
+.menu-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduzi o espaço entre os itens */
+}
+
+.menu-lateral h2 {
+    margin: 0 0 40px 0; /* Adiciona espaçamento abaixo do título */
+    color: #295B8D;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.menu-opcoes h3 {
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 30px;
+    margin-top: 208px;
+    left: -90px;
+}
+
+.menu-opcoes h4 {
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 20px;
+    margin-top: 5px;
+    left: -30px;
+}
+
+.menu-opcoes h5 {
+    position: relative;
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 20px;
+    margin-top: 10px;
+    left: -30px;
+}
+
+.menu-opcoes p.subItem {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: 5px; /* Aumente esse valor para descer mais */
+    text-align: left;
+}
+
+.menu-opcoes p.subItem + p.subItem {
+    margin-top: 5px;
+}
+
+.menu-opcoes p.subitens {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: 5px; /* Aumente esse valor para descer mais */
+    text-align: left;
+}
+
+.menu-opcoes p.subitens + p.subitens {
+    margin-top: 5px;
+}
+
+/* Estilo para os novos textos <p> como subitens */
+.menu-opcoes p.subitem {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: -240px; /* Ajuste para aproximar "Abrir" mais do título */
+    text-align: left;
+}
+
+/* Para garantir que o novo subitem apareça abaixo de "Abrir" */
+.menu-opcoes p.subitem + p.subitem {
+    margin-top: 5px; /* Ajuste para deixar um pequeno espaçamento entre "Abrir" e o novo subitem */
 }
 
 /* Imagem central da empresa */
