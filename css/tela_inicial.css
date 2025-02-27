@@ -1,8 +1,9 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Estilo do header */
@@ -13,6 +14,7 @@ header {
     padding: 10px 20px;
     background-color: #295B8D;
     border-bottom: 2px solid #ddd;
+    z-index: 10;
 }
 
 header img {
@@ -23,6 +25,124 @@ header img {
 .menu {
     height: 26px; /* Ajuste da altura da logo */
     cursor: pointer;
+}
+#menu-lateral {
+    position: absolute;
+    top: 90px; /* Ajuste para ficar abaixo do header */
+    left: -250px; /* Inicialmente fora da tela */
+    width: 250px;
+    height: calc(100% - 90px); /* Ajuste para ocupar o espaço corretamente */
+    background-color: white;
+    color: #295B8D;
+    transition: left 0.6s ease, box-shadow 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Garante que o conteúdo fique dentro do menu */
+}
+
+/* Quando o menu estiver aberto */
+#menu-lateral.aberto {
+    left: 0px; /* Posiciona o menu na tela */
+    box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra quando aberto */
+}
+
+/* Estilo para o conteúdo dentro do menu */
+.menu-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduzi o espaço entre os itens */
+}
+
+.menu-lateral h2 {
+    margin: 0 0 40px 0; /* Adiciona espaçamento abaixo do título */
+    color: #295B8D;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.menu-opcoes h3 {
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 30px;
+    margin-top: 208px;
+    left: -90px;
+}
+
+.menu-opcoes h4 {
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 20px;
+    margin-top: 5px;
+    left: -30px;
+}
+
+.menu-opcoes h5 {
+    position: relative;
+    margin: 0;
+    color: #295B8D;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    padding-left: 20px;
+    margin-top: 10px;
+    left: -30px;
+}
+
+.menu-opcoes p.subItem {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: 5px; /* Aumente esse valor para descer mais */
+    text-align: left;
+}
+
+.menu-opcoes p.subItem + p.subItem {
+    margin-top: 5px;
+}
+
+.menu-opcoes p.subitens {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: 5px; /* Aumente esse valor para descer mais */
+    text-align: left;
+}
+
+.menu-opcoes p.subitens + p.subitens {
+    margin-top: 5px;
+}
+
+/* Estilo para os novos textos <p> como subitens */
+.menu-opcoes p.subitem {
+    margin: 0;
+    color: #295B8D;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding-left: 22px;  /* Indentação para mostrar que é um subitem */
+    margin-top: -240px; /* Ajuste para aproximar "Abrir" mais do título */
+    text-align: left;
+}
+
+/* Para garantir que o novo subitem apareça abaixo de "Abrir" */
+.menu-opcoes p.subitem + p.subitem {
+    margin-top: 5px; /* Ajuste para deixar um pequeno espaçamento entre "Abrir" e o novo subitem */
 }
 
 /* Imagem central da empresa */
@@ -46,7 +166,8 @@ header img {
 }
 
 h2 {
-    margin-top: 60px; /* Adiciona espaçamento abaixo do h2 */
+    margin-top: 2rem;
+    margin-left: 2rem; 
     font-family: 'Pridi';
     font-size: 22px;
     color: #5C84AC;
@@ -54,13 +175,10 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 23   px;
-    font-weight: bold;
-    color: #295B8D;
-    position: relative; /* Permite ajustar sem afetar os outros elementos */
-    top: -150px; /* Ajuste para subir apenas o h3 */
-    left: -75px;
+    margin-left: 2rem; 
     font-family: 'Pridi';
+    font-size: 22px;
+    color: #5C84AC;
 }
 
 h4 {
@@ -71,22 +189,14 @@ h4 {
     position: relative;
     left: -10px;
 }
-#menu-container {
-    transition: opacity 0.3s ease-in-out;
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
 
 .container-botoes {
     display: inline-grid; /* Faz o container ter a largura exata dos botões */
     gap: 13px; /* Espaçamento entre os botões */
     justify-content: start; /* Alinha os botões à esquerda */
     grid-template-columns: repeat(2, auto); /* 2 colunas */
-    padding-left: 10px; /* Adiciona um espaço da esquerda */
-    margin-top: 10px;
+    padding-left: 2rem; /* Adiciona um espaço da esquerda */
+    margin-top: 0.5rem;
     width: fit-content; /* Ajusta a largura ao conteúdo */
 }
 
@@ -134,12 +244,12 @@ h4 {
 .caixa-descricao {
     width: 400px; /* Ajuste conforme necessário */
     max-width: 600px; /* Define uma largura máxima */
-    height: 185px; /* Ajuste conforme necessário */
+    height: 9rem; /* Ajuste conforme necessário */
     background-color: #acc7e0; /* Cor de fundo */
     border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 15px; /* Espaçamento interno */
-    margin-top: 10px; /* Espaço entre o h2 e a caixa */
+    margin: 2rem; /* Espaço entre o h2 e a caixa */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
     position: relative; /* Para permitir posicionamento absoluto dentro dela */
     gap: 15px;
@@ -187,30 +297,55 @@ h4 {
 
 .area-item {
     position: absolute;
-    top: 75px; /* Para ficar abaixo do header */
+    top: 4.6875rem; /* Para ficar abaixo do header */
     right: 0;
-    width: 28%; /* Define a largura da área destacada */
-    height: 855px; /* Mesma altura da .caixa-descricao */
+    width: 16%; /* Define a largura da área destacada */
+    height: 53.5rem; /* Mesma altura da .caixa-descricao */
     background-color: #5C84AC; /* Cor de fundo diferente */
     padding: 20px; /* Espaço interno */
     overflow-y: auto; /* Adiciona rolagem se necessário */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Faz a imagem ficar no final */
 }
 
 .area-item img {
     position: absolute;
     bottom: 5px; /* Distância do fundo */
     right: 10px; /* Distância da lateral */
-    width: 110px; /* Ajuste o tamanho conforme necessário */
+    width: 6.8rem; /* Ajuste o tamanho conforme necessário */
     height: auto;
 }
 
+.informacoes-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -400px; /* Ajuste esse valor conforme necessário */
+}
+
+.informacoes-produto p {
+    color: white;
+    font-family: 'Pridi', sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px; /* Reduz a distância do texto para o input */
+}
+
+.informacoes-produto input {
+    width: 100%;
+    padding: 25px; /* Aumenta o espaçamento interno */
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Deixa os inputs arredondados */
+    font-size: 16px; /* Aumenta o tamanho do texto dentro da caixa */
+    transition: 0.3s ease-in-out;
+    outline: none;
+    background: #f9f9f9; /* Fundo levemente cinza */
+    margin-top: 0; /* Remove qualquer espaçamento extra acima do input */
+}
+
 .espaco-em-branco {
-    height: 260px; /* Ajuste a altura conforme necessário */
-    width: 90%; /* Preenche toda a largura disponível */
-    margin-bottom: 530px;
+    height: 15rem; /* Ajuste a altura conforme necessário */
+    width: 80%; /* Preenche toda a largura disponível */
+    margin-bottom: 33rem;
     background-color: white;
     border-radius: 15px;
     margin-left: 17px;
@@ -225,22 +360,44 @@ h4 {
     font-family: 'Pridi';
 }
 
+.mais-menos {
+    top: 2rem;
+}
+
+#quantidade {
+    display: inline-block;
+    width: 4rem;  
+    height: 3.1rem;  
+    text-align: center;  
+    line-height: 49px;  
+    background-color: #acc7e0;  
+    position: absolute;  /* Permite o ajuste preciso de posição */
+    top: 20rem;  /* Ajuste o valor de acordo com a distância que deseja mover para cima */
+    left: 50%;  /* Centraliza o span horizontalmente */
+    transform: translateX(-48%);  /* Ajusta para um verdadeiro centro, levando em conta o próprio tamanho */
+    pointer-events: none;
+    color: #295B8D;
+    font-family: 'Pridi';
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
 .menos-botao {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;  /* Define um tamanho fixo para o botão */
-    height: 40px; /* Define um tamanho fixo para o botão */
+    width: 2.5rem;  /* Define um tamanho fixo para o botão */
+    height: 2.5rem; /* Define um tamanho fixo para o botão */
     padding: 5px; /* Remove espaços internos excessivos */
     border: none; /* Remove borda, se necessário */
     background: none; /* Remove fundo extra */
     cursor: pointer; /* Mantém o cursor de clique */
-    margin-top: 310px; /* Ajusta a distância para baixo */
+    margin-top: 19.4rem; /* Ajusta a distância para baixo */
     margin-right: 55%;
 }
 
 .menos-botao img {
-    width: 26px;  /* Faz a imagem ocupar todo o botão */
+    width: 1.5rem;  /* Faz a imagem ocupar todo o botão */
     top: 23px;
     margin-left: 3px;
 }
@@ -249,20 +406,20 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;  /* Define um tamanho fixo para o botão */
-    height: 40px; /* Define um tamanho fixo para o botão */
+    width: 2.5rem;  /* Define um tamanho fixo para o botão */
+    height: 2.5rem; /* Define um tamanho fixo para o botão */
     padding: 5px; /* Remove espaços internos excessivos */
     border: none; /* Remove borda, se necessário */
     background: none; /* Remove fundo extra */
     cursor: pointer; /* Mantém o cursor de clique */
-    margin-top: 310px; /* Ajusta a distância para baixo */
+    margin-top: 19.4rem; /* Ajusta a distância para baixo */
     margin-right: 25%;
     align-items: center;
     justify-content: center;
 }
 
 .mais-botao img {
-    width: 30px;  /* Faz a imagem ocupar todo o botão */
+    width: 1.5rem;  /* Faz a imagem ocupar todo o botão */
     top: 12px;
     margin-left: 2px;
 }
@@ -297,26 +454,26 @@ h4 {
 }
 
 .caixa-total {
-    width: 400px; /* Mesmo tamanho da .caixa-descricao */
-    max-width: 350px; /* Mantém uma largura máxima */
-    height: 130px; /* Ajuste conforme necessário */
+    width: 25rem; /* Mesmo tamanho da .caixa-descricao */
+    max-width: 37.5rem; /* Mantém uma largura máxima */
+    height: 8rem; /* Ajuste conforme necessário */
     background-color: #295B8D; /* Mesma cor de fundo */
     border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 10px; /* Espaçamento interno */
-    margin-top: -154px; /* Ajuste para alinhar com o h3 */
+    margin-top: -16.5rem; /* Ajuste para alinhar com o h3 */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
     text-align: center; /* Alinha o texto ao centro */
     font-weight: bold;
     color: white;
     position: relative;
-    left: 550px; /* Ajuste para alinhar com o h3 */
+    left: 40rem; /* Ajuste para alinhar com o h3 */
 }
 
 .caixa-total p {
     margin: 5px 0; /* Espaçamento entre os textos */
-    font-size: 40px;
-    left: -10px;
+    font-size: 58px;
+    left: -80px;
     position: relative;
     margin-top: 22px;
 }
@@ -341,8 +498,7 @@ h4 {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
+    width: 70%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -362,16 +518,6 @@ h4 {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Título */
-h2 {
-    text-align: center;
-    width: 100%;
-    margin-top: -10px; /* Subindo o título */
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
 }
 
 /* Parte superior do Modal (horizontal) */
@@ -489,8 +635,7 @@ h2 {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
+    width: 70%;
     border-radius: 10px; /* Borda arredondada */
 }
 
@@ -565,4 +710,78 @@ h2 {
 /* Instrução do lado direito */
 .right {
     text-align: right;
+}
+
+/* Estilo do Modal - CaixaModal e CaixaModalfechada */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Adiciona um espaço no topo para o título */
+}
+
+.CaixaModal-header h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 24px; /* Tamanho maior para o título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.CaixaModal-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Adiciona espaçamento em cima de tudo */
+}
+
+.CaixaModal-left,
+.CaixaModal-right {
+    width: 48%; /* Controla a largura de cada coluna */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold; /* Deixa o identificador mais destacado */
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não altere o tamanho do input */
+}
+
+.instructions {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Estilo para o botão de Fechar Caixa dentro do modal */
+#fecharCaixaBtn {
+    position: absolute;  /* Faz o botão ficar dentro do modal */
+    bottom: 20px;        /* Ajuste a distância para 20px do fundo do modal */
+    left: 50%;           /* Centraliza o botão horizontalmente */
+    transform: translateX(-50%);  /* Corrige o alinhamento para centralizar */
+    background-color: #6200ea;  /* Cor de fundo do botão */
+    color: white;     /* Cor do texto */
+    padding: 5px 15px;  /* Tamanho do botão (pequeno) */
+    border: none;     /* Remove a borda */
+    border-radius: 5px;  /* Cantos arredondados */
+    font-size: 14px;   /* Tamanho de fonte pequeno */
+    cursor: pointer;  /* Mostra o ponteiro do mouse */
+    transition: background-color 0.3s ease;  /* Efeito ao passar o mouse */
+}
+
+#fecharCaixaBtn:hover {
+    background-color: #3700b3;  /* Cor mais escura ao passar o mouse */
+}
+
+#fecharCaixaBtn:focus {
+    outline: none;  /* Remove o contorno do foco */
+    box-shadow: 0 0 0 2px #3700b3;  /* Adiciona um destaque quando o botão é focado */
 }
