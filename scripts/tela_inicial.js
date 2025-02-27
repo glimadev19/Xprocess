@@ -195,6 +195,14 @@ document.getElementById("informarMaisDadosBtn").addEventListener("click", functi
     isInformarMaisDadosModalOpen = true;
 });
 
+const menuToggle = document.getElementById("menu-toggle");
+const menuLateral = document.getElementById("menu-lateral");
+
+menuToggle.addEventListener("click", function() {
+    // Alterna entre abrir e fechar o menu lateral
+    menuLateral.classList.toggle('aberto'); // Adiciona ou remove a classe "aberto"
+});
+
 // Fechar os modais ao clicar no "X"
 document.querySelectorAll('.close').forEach(button => {
     button.addEventListener('click', function() {
