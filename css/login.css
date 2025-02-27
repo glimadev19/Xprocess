@@ -95,8 +95,8 @@ header .logo img {
 }
 
 .login-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background: rgb(58, 59, 134);
+    background: linear-gradient(0deg, rgb(59, 61, 152) 0%, rgb(115, 157, 199) 100%);
 }
 
 .input-wrapper {

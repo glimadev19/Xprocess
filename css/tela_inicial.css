@@ -300,14 +300,13 @@ h4 {
     position: absolute;
     top: 4.6875rem; /* Para ficar abaixo do header */
     right: 0;
-    width: 20%; /* Define a largura da área destacada */
+    width: 16%; /* Define a largura da área destacada */
     height: 53.5rem; /* Mesma altura da .caixa-descricao */
     background-color: #5C84AC; /* Cor de fundo diferente */
     padding: 20px; /* Espaço interno */
     overflow-y: auto; /* Adiciona rolagem se necessário */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Faz a imagem ficar no final */
 }
 
 .area-item img {
@@ -319,8 +318,8 @@ h4 {
 }
 
 .espaco-em-branco {
-    height: 16rem; /* Ajuste a altura conforme necessário */
-    width: 90%; /* Preenche toda a largura disponível */
+    height: 15rem; /* Ajuste a altura conforme necessário */
+    width: 80%; /* Preenche toda a largura disponível */
     margin-bottom: 33rem;
     background-color: white;
     border-radius: 15px;
