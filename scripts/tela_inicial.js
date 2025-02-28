@@ -6,6 +6,7 @@ let isCaixaModalFechadaOpen = false; // Para o modal CaixaModalfechada
 let isInformarClienteModalOpen = false; // Para o novo modal de Informar Cliente
 let isInformarMaisDadosModalOpen = false; // Para o modal Informar Mais Dados
 let isPesquisarProdutoModalOpen = false; // Para o modal de Pesquisar Produto
+let iscargaCompletaModal = false;
 
 // Função para fechar todos os modais abertos
 function fecharModaisAbertos() {
@@ -43,8 +44,13 @@ function fecharModaisAbertos() {
         document.getElementById('pesquisarProdutoModal').style.display = "none";
         isPesquisarProdutoModalOpen = false;
     }
+    if (iscargaCompletaModal) {
+        document.getElementById('cargaCompletaModal').style.display = "none";
+        iscargaCompletaModal = false;
+    }
 }
 
+  
 // Função para abrir o modal CaixaModalfechada
 function abrirModalFecharCaixa() {
     document.getElementById("CaixaModalfechada").style.display = "block";
@@ -110,6 +116,7 @@ function fecharModalPorClique(event) {
         if (event.target.id === 'informarClienteModal') isInformarClienteModalOpen = false;
         if (event.target.id === 'informarMaisDadosModal') isInformarMaisDadosModalOpen = false;
         if (event.target.id === 'pesquisarProdutoModal') isPesquisarProdutoModalOpen = false;
+        if (event.target.id === 'cargaCompletaModal') iscargaCompletaModal = false;
     }
 }
 
@@ -135,6 +142,17 @@ document.addEventListener('keydown', function(event) {
             document.getElementById('vendedoresModal').style.display = "block";
             isVendedoresModalOpen = true;
             showVendedoresModal();
+        }
+    }
+
+       // Modal de Lista de Vendedores com F7
+       if (event.key === 'F12') {
+        if (iscargaCompletaModal) {
+            fecharModaisAbertos();
+        } else {
+            fecharModaisAbertos();
+            document.getElementById('cargaCompletaModal').style.display = "block";
+            iscargaCompletaModal = true;
         }
     }
 
@@ -216,6 +234,7 @@ document.querySelectorAll('.close').forEach(button => {
             if (modal.id === 'informarClienteModal') isInformarClienteModalOpen = false;
             if (modal.id === 'informarMaisDadosModal') isInformarMaisDadosModalOpen = false;
             if (modal.id === 'pesquisarProdutoModal') isPesquisarProdutoModalOpen = false;
+            if (modal.id === 'cargaCompletaModal') iscargaCompletaModal = false;
         }
     });
 });
