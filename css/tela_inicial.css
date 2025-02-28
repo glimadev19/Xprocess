@@ -173,14 +173,6 @@ h2 {
     color: #5C84AC;
 }
 
-h3 {
-    text-align: center;
-    margin-left: 2rem; 
-    font-family: 'Pridi';
-    font-size: 22px;
-    color: #5C84AC;
-}
-
 h4 {
     font-family: 'Pridi';
     color: white;
@@ -213,7 +205,7 @@ h4 {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
     width: 124px;
-    height: 128px;
+    height: 7rem;
     overflow: hidden;
 }
 
@@ -229,7 +221,7 @@ h4 {
 }
 
 .botao-com-imagens .imagem-meio {
-    max-width: 58px;
+    max-width: 2.8rem;
     height: auto;
     margin-bottom: -1px;
 }
@@ -297,9 +289,9 @@ h4 {
 
 .area-item {
     position: absolute;
-    top: 4.6875rem; /* Para ficar abaixo do header */
+    top: 4.7rem; /* Para ficar abaixo do header */
     right: 0;
-    width: 16%; /* Define a largura da área destacada */
+    width: 23vh; /* Define a largura da área destacada */
     height: 53.5rem; /* Mesma altura da .caixa-descricao */
     background-color: #5C84AC; /* Cor de fundo diferente */
     padding: 20px; /* Espaço interno */
@@ -344,11 +336,10 @@ h4 {
 
 .espaco-em-branco {
     height: 15rem; /* Ajuste a altura conforme necessário */
-    width: 80%; /* Preenche toda a largura disponível */
+    width: 100%; /* Preenche toda a largura disponível */
     margin-bottom: 33rem;
     background-color: white;
     border-radius: 15px;
-    margin-left: 17px;
     position: relative; /* Necessário para usar o posicionamento absoluto dentro dela */
 }
 
@@ -456,18 +447,18 @@ h4 {
 .caixa-total {
     width: 25rem; /* Mesmo tamanho da .caixa-descricao */
     max-width: 37.5rem; /* Mantém uma largura máxima */
-    height: 8rem; /* Ajuste conforme necessário */
+    height: 9.8rem; /* Ajuste conforme necessário */
     background-color: #295B8D; /* Mesma cor de fundo */
     border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 10px; /* Espaçamento interno */
-    margin-top: -16.5rem; /* Ajuste para alinhar com o h3 */
+    margin-top: -13.5rem; /* Ajuste para alinhar com o h3 */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
     text-align: center; /* Alinha o texto ao centro */
     font-weight: bold;
     color: white;
     position: relative;
-    left: 40rem; /* Ajuste para alinhar com o h3 */
+    left: 45rem; /* Ajuste para alinhar com o h3 */
 }
 
 .caixa-total p {
@@ -502,13 +493,13 @@ h4 {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: 80%;
+
 }
 
 /* Fechar botão */
 .close {
     color: #aaa;
-    float: right;
+    float: left;
     font-size: 28px;
     font-weight: bold;
 }
