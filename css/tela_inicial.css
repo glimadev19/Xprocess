@@ -31,11 +31,11 @@ header img {
     top: 90px; /* Ajuste para ficar abaixo do header */
     left: -250px; /* Inicialmente fora da tela */
     width: 250px;
-    height: calc(100% - 90px); /* Ajuste para ocupar o espaço corretamente */
     background-color: white;
     color: #295B8D;
     transition: left 0.6s ease, box-shadow 0.5s ease;
     padding: 20px;
+    z-index: 1;
     box-sizing: border-box;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -51,61 +51,28 @@ header img {
     box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra quando aberto */
 }
 
-/* Estilo para o conteúdo dentro do menu */
-.menu-opcoes {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* Reduzi o espaço entre os itens */
-}
-
 .menu-lateral h2 {
     margin: 0 0 40px 0; /* Adiciona espaçamento abaixo do título */
     color: #295B8D;
     font-size: 35px;
     font-weight: bold;
-    font-family: 'Poppins';
     text-align: center;
 }
 
-.menu-opcoes h3 {
+.menu-lateral h3 {
     margin: 0;
     color: #295B8D;
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Poppins';
     padding-left: 30px;
-    margin-top: 208px;
-    left: -90px;
-}
-
-.menu-opcoes h4 {
-    margin: 0;
-    color: #295B8D;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: 'Poppins';
-    padding-left: 20px;
-    margin-top: 5px;
-    left: -30px;
-}
-
-.menu-opcoes h5 {
-    position: relative;
-    margin: 0;
-    color: #295B8D;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: 'Poppins';
-    padding-left: 20px;
     margin-top: 10px;
-    left: -30px;
+    left: -90px;
 }
 
 .menu-opcoes p.subItem {
     margin: 0;
     color: #295B8D;
     font-size: 20px;
-    font-family: 'Poppins';
     padding-left: 22px;  /* Indentação para mostrar que é um subitem */
     margin-top: 5px; /* Aumente esse valor para descer mais */
     text-align: left;
@@ -119,7 +86,6 @@ header img {
     margin: 0;
     color: #295B8D;
     font-size: 20px;
-    font-family: 'Poppins';
     padding-left: 22px;  /* Indentação para mostrar que é um subitem */
     margin-top: 5px; /* Aumente esse valor para descer mais */
     text-align: left;
@@ -134,7 +100,6 @@ header img {
     margin: 0;
     color: #295B8D;
     font-size: 20px;
-    font-family: 'Poppins';
     padding-left: 22px;  /* Indentação para mostrar que é um subitem */
     margin-top: -240px; /* Ajuste para aproximar "Abrir" mais do título */
     text-align: left;
@@ -168,13 +133,11 @@ header img {
 h2 {
     margin-top: 2rem;
     margin-left: 2rem; 
-    font-family: 'Pridi';
     font-size: 22px;
     color: #5C84AC;
 }
 
 h4 {
-    font-family: 'Pridi';
     color: white;
     font-size: 23px;
     margin-top: -10px;
@@ -291,7 +254,7 @@ h4 {
     position: absolute;
     top: 4.7rem; /* Para ficar abaixo do header */
     right: 0;
-    width: 23vh; /* Define a largura da área destacada */
+    width: 28vh; /* Define a largura da área destacada */
     height: 53.5rem; /* Mesma altura da .caixa-descricao */
     background-color: #5C84AC; /* Cor de fundo diferente */
     padding: 20px; /* Espaço interno */
@@ -317,7 +280,6 @@ h4 {
 
 .informacoes-produto p {
     color: white;
-    font-family: 'Pridi', sans-serif;
     font-size: 15px;
     margin-bottom: 5px; /* Reduz a distância do texto para o input */
 }
@@ -348,7 +310,6 @@ h4 {
     font-size: 25px;
     margin-left: 58px;
     color: #F61515;
-    font-family: 'Pridi';
 }
 
 .mais-menos {
@@ -368,7 +329,6 @@ h4 {
     transform: translateX(-48%);  /* Ajusta para um verdadeiro centro, levando em conta o próprio tamanho */
     pointer-events: none;
     color: #295B8D;
-    font-family: 'Pridi';
     font-weight: bold;
     font-size: 1.8rem;
 }
@@ -494,21 +454,6 @@ h4 {
     display: flex;
     flex-direction: column;
 
-}
-
-/* Fechar botão */
-.close {
-    color: #aaa;
-    float: left;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* Parte superior do Modal (horizontal) */
