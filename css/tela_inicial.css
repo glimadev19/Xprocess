@@ -521,6 +521,7 @@ h4 {
 /* Organização dos itens dentro da parte direita do modal */
 .modal-right p {
     margin-bottom: 10px;
+    font-size: 0.90rem;
 }
 
 /* Valor e botão "Finalizar Venda" na parte inferior direita */
@@ -540,6 +541,7 @@ h4 {
     align-items: center;
     border: 2px solid #ddd;
     border-radius: 5px;
+    border-color: #5C84AC;
     padding: 10px;
 }
 
@@ -689,6 +691,7 @@ input[type="text"] {
     padding: 8px;
     font-size: 14px;
     width: 100%;
+    border-color: #5C84AC;
     box-sizing: border-box; /* Garante que o padding não altere o tamanho do input */
 }
 
