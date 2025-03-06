@@ -251,3 +251,33 @@ document.addEventListener("keydown", function (event) {
         alterarQuantidade(1);
     }
 });
+
+function gerarNotaFiscal() {
+    const produtos = [
+        { nome: "Produto A", quantidade: 2, preco: 100.00 },
+        { nome: "Produto B", quantidade: 1, preco: 300.00 },
+        { nome: "Produto C", quantidade: 3, preco: 50.00 }
+    ];
+
+    let total = 0;
+    let listaHTML = "";
+
+    produtos.forEach(produto => {
+        const subtotal = produto.quantidade * produto.preco;
+        total += subtotal;
+        listaHTML += `<div><span>${produto.nome} (x${produto.quantidade})</span> <span>R$ ${subtotal.toFixed(2)}</span></div>`;
+    });
+
+    // Inserindo os valores na Nota Fiscal
+    document.getElementById("dataNota").innerText = `Data: ${new Date().toLocaleString()}`;
+    document.getElementById("listaProdutos").innerHTML = listaHTML;
+    document.getElementById("totalNota").innerText = `R$ ${total.toFixed(2)}`;
+
+    // Exibir o modal
+    document.getElementById("modalNota").style.display = "flex";
+}
+
+// Função para fechar o modal
+function fecharModal() {
+    document.getElementById("modalNota").style.display = "none";
+}
