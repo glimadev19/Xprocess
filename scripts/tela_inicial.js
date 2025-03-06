@@ -221,24 +221,6 @@ menuToggle.addEventListener("click", function() {
     menuLateral.classList.toggle('aberto'); // Adiciona ou remove a classe "aberto"
 });
 
-// Fechar os modais ao clicar no "X"
-document.querySelectorAll('.close').forEach(button => {
-    button.addEventListener('click', function() {
-        let modal = this.closest('.modal');
-        if (modal) {
-            modal.style.display = "none";
-            if (modal.id === 'myModal') isModalOpen = false;
-            if (modal.id === 'vendedoresModal') isVendedoresModalOpen = false;
-            if (modal.id === 'CaixaModal') isCaixaModalOpen = false;
-            if (modal.id === 'CaixaModalfechada') isCaixaModalFechadaOpen = false;
-            if (modal.id === 'informarClienteModal') isInformarClienteModalOpen = false;
-            if (modal.id === 'informarMaisDadosModal') isInformarMaisDadosModalOpen = false;
-            if (modal.id === 'pesquisarProdutoModal') isPesquisarProdutoModalOpen = false;
-            if (modal.id === 'cargaCompletaModal') iscargaCompletaModal = false;
-        }
-    });
-});
-
 // Fechar o modal de Informar Cliente ao clicar fora
 window.onclick = fecharModalPorClique;
 
