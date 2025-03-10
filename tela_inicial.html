@@ -30,29 +30,13 @@
             <p class="subitens">Carga Completa</p>
             <p class="subitens">Carga Rápida</p>
             <p class="subitens">Resumo do Dia</p>
-            <p class="subItem" onclick="gerarNotaFiscal()">Exportar</p>
+            <p class="subitens">Exportar</p>
 
             <h3>Empresa</h3>
             <p class="subItem">Carga da Empresa</p>
             <p class="subItem">Carga Rápida</p>
             <p class="subItem">Resumo do Dia</p>
-            <p class="subItem" onclick="gerarNotaFiscal()">Exportar</p>
-    </div>
-
-    <div id="modalNota">
-        <div class="nota-fiscal">
-            <h3>NOTA FISCAL ELETRÔNICA</h3>
-            <p>Empresa Exemplo LTDA</p>
-            <p>CNPJ: 12.345.678/0001-99</p>
-            <p id="dataNota"></p>
-            <div class="linha"></div>
-    
-            <div class="itens" id="listaProdutos"></div>
-    
-            <div class="linha"></div>
-            <p class="total">Total: <span id="totalNota"></span></p>
-            <button class="fechar" onclick="fecharModal()">Fechar</button>
-        </div>
+            <p class="subItem">Exportar</p>
     </div>
 
     <!-- Container que será ocultado ao clicar no menu -->
@@ -279,6 +263,26 @@
                     <button class="finalizar-venda">Finalizar Venda</button>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de validação do usuário -->
+<div id="validacaoUsuario" class="modal">
+    <div class="modal-content"> 
+      <span class="">&times;</span>
+        <!-- Título do Modal -->
+        <div class="modal-header">
+            <h2>Validação do usuário</h2>
+        </div>
+
+        <div class="modal-section">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" placeholder="Digite o usuário">
+        </div>
+        <div class="modal-section">
+            <label for="senha">Senha</label>
+            <input type="text" id="senha" placeholder="Digite a senha">
         </div>
     </div>
 </div>

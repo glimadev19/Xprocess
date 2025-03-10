@@ -7,7 +7,7 @@ let isInformarClienteModalOpen = false; // Para o novo modal de Informar Cliente
 let isInformarMaisDadosModalOpen = false; // Para o modal Informar Mais Dados
 let isPesquisarProdutoModalOpen = false; // Para o modal de Pesquisar Produto
 let iscargaCompletaModal = false;
-
+let isvalidacaoUsuario = false;
 // Função para fechar todos os modais abertos
 function fecharModaisAbertos() {
     if (isModalOpen) {
@@ -47,6 +47,10 @@ function fecharModaisAbertos() {
     if (iscargaCompletaModal) {
         document.getElementById('cargaCompletaModal').style.display = "none";
         iscargaCompletaModal = false;
+    }
+    if (isvalidacaoUsuario) {
+        document.getElementById('validacaoUsuario').style.display = "none";
+        isvalidacaoUsuario= false;
     }
 }
 
@@ -117,6 +121,7 @@ function fecharModalPorClique(event) {
         if (event.target.id === 'informarMaisDadosModal') isInformarMaisDadosModalOpen = false;
         if (event.target.id === 'pesquisarProdutoModal') isPesquisarProdutoModalOpen = false;
         if (event.target.id === 'cargaCompletaModal') iscargaCompletaModal = false;
+        if (event.target.id === 'validacaoUsuario') isvalidacaoUsuario = false;
     }
 }
 
@@ -132,6 +137,18 @@ document.addEventListener('keydown', function(event) {
             isModalOpen = true;
         }
     }
+
+// Evento de clique para abrir o modal
+document.querySelector(".finalizar-venda").addEventListener("click", function() {
+    if (isvalidacaoUsuario) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('validacaoUsuario').style.display = "block";
+        isvalidacaoUsuario = true;
+    }
+});
+
 
     // Modal de Lista de Vendedores com F7
     if (event.key === 'F7') {
