@@ -130,3 +130,70 @@ header .logo img {
 .input-group {
     margin-bottom: 15px;
 }
+
+ /* Responsividade */
+  @media (max-width: 768px) {
+    header {
+      font-size: 4rem;
+    }
+
+    header .logo img {
+        width: 4rem;
+        height: 3rem;
+    }
+  
+    .login-container {
+      padding: 20px;
+    }
+
+    .login-container h1 {
+        margin-bottom: 1rem;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+    
+    .input-group label {
+        margin-bottom: 0.5rem;
+    }
+    
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .forgot-password {
+        display: block;
+        font-size: 0.9rem;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+    
+    .login-button {
+        padding: 10px;
+        width: 6rem;
+        font-size: 1rem;
+    }
+    
+    .input-wrapper {
+        position: relative;
+    }
+    
+    .input-wrapper .input-icon {
+        position: absolute;
+        top: 50%;
+        left: 11rem; /* Ajuste a posição horizontal */
+        height: 20px; /* Ajuste o tamanho da imagem */
+    }
+    
+    .input-wrapper input {
+        width: 100%;
+        padding: 10px 8px 8px 10px; /* Adicione espaço para o ícone à esquerda */
+    }
+    
+    .input-group {
+        margin-bottom: 15px;
+    }
+  }
+  

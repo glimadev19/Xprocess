@@ -127,7 +127,7 @@ header img {
 }
 
 /* Imagem do usuário à direita */
-.Usuário {
+.user {
     height: 45px; /* Altura igual à logo */
     cursor: pointer; /* Indica que é clicável */
     margin-top: 10px;
@@ -396,6 +396,7 @@ h4 {
     justify-content: center; /* Centraliza horizontalmente */
 }
 
+
 .botao-imagem:hover {
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5); /* Efeito ao passar o mouse */
 }
@@ -404,6 +405,30 @@ h4 {
     max-width: 34px; /* Ajuste o tamanho da imagem conforme necessário */
     height: auto;
     left: 11px;
+    bottom: 8px;
+}
+
+.botao-li {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background-color: white; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    border-radius: 10px; 
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out; 
+    width: 54px; 
+    height: 50px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.botao-li img {
+    max-width: 34px; 
+    height: auto;
     bottom: 8px;
 }
 
@@ -728,6 +753,402 @@ input[type="text"] {
     box-shadow: 0 0 0 2px #3700b3;  /* Adiciona um destaque quando o botão é focado */
 }
 
+   /* Responsividade */
+   @media (max-width: 768px) {
+    header {
+      font-size: 4rem;
+    }
+
+    header img {
+        width: 4rem;
+        height: 3rem;
+    }
+  
+    .menu {
+        width: 1.5rem;
+        height: 1rem;
+    }
+
+    #menu-lateral {
+        position: absolute;
+        top: 90px; 
+        left: -250px; 
+        width: 250px;
+        padding: 20px;
+    }
+
+    .menu-lateral h2 {
+        font-size: 2rem;
+    }
+    
+    .menu-lateral h3 {
+        font-size: 1rem;
+    }
+    
+    .menu-opcoes p.subItem {
+        font-size: 20px;
+        padding-left: 22px; 
+        margin-top: 5px; 
+    }
+    
+    .menu-opcoes p.subItem + p.subItem {
+        margin-top: 5px;
+    }
+    
+    .empresa-user {
+        font-size: 16px; 
+        font-weight: bold; 
+    }
+    
+    .user {
+        height: 45px; /* Altura igual à logo */
+        cursor: pointer; /* Indica que é clicável */
+        margin-top: 10px;
+    }
+    
+    h2 {
+        margin-top: 1.5rem;
+        margin-left: 1.5rem; 
+        font-size: 1rem;
+    }
+    
+    h4 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        left: 1rem;
+    }
+    
+    .container-botoes {
+        gap: 13px; 
+        padding-left: 1rem; 
+        margin-top: 0.3rem;
+    }
+    
+    .botao-com-imagens {
+        padding: 0.5rem;
+        width: 6rem;
+        height: 5rem;
+    }
+    
+    .botao-com-imagens .imagem-topo {
+        max-width: 1rem;
+        margin-bottom: 0.9rem;
+    }
+    
+    .botao-com-imagens .imagem-meio {
+        max-width: 1.5rem;
+    }
+    
+    .botao-com-imagens .texto-base {
+        font-size: 0.8rem;
+    }
+    
+    .caixa-descricao {
+        width: 23rem;
+        max-width: 35rem;
+        height: 7rem;
+        padding: 10px; 
+        margin: 2rem;
+        gap: 10px;
+    }
+    
+    .caixa-descricao p {
+        margin: 3px 0; 
+        font-size: 13px; 
+        line-height: 1.3;
+    }
+    
+    .botoes-direita {
+        top: 8px;
+        right: 8px;
+        gap: 8px; /* Espaçamento entre os botões */
+    }
+    
+    /* Estilos dos botões */
+    .botao-pequeno {
+        width: 2rem;
+        height: 1.8rem;
+        padding: 3px;
+    }
+    
+    .botao-pequeno img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .area-item {
+        width: 23vh; 
+        height: 49rem; 
+        padding: 0.5rem; 
+        overflow: hidden;
+    }
+    
+    .area-item img {
+        bottom: 2px; 
+        right: 5px; 
+        width: 5rem;
+    }
+    
+    .informacoes-produto {
+        margin-top: -22rem; 
+    }
+    
+    .informacoes-produto p {
+        font-size: 12px;
+        margin-bottom: 3px; 
+    }
+    
+    .informacoes-produto input {
+        padding: 22px; 
+        font-size: 0.8rem; 
+    }
+    
+    .espaco-em-branco {
+        height: 12rem; 
+        width: 100%; 
+        margin-bottom: 30rem;
+    }
+    
+    .espaco-em-branco p {
+        margin-top: 30%;
+        font-size: 20px;
+        margin-left: 3rem;
+    }
+    
+    .mais-menos {
+        top: 2rem;
+    }
+    
+    #quantidade {
+        width: 3rem;  
+        height: 2.5rem;  
+        z-index: 1;  
+        line-height: 3rem;  
+        top: 16.5rem;  /* Ajuste o valor de acordo com a distância que deseja mover para cima */
+        left: 50%;  /* Centraliza o span horizontalmente */
+        font-size: 1.8rem;
+    }
+    
+    .menos-botao {
+        width: 2.5rem;  /* Define um tamanho fixo para o botão */
+        height: 2.5rem; /* Define um tamanho fixo para o botão */
+        padding: 5px; /* Remove espaços internos excessivos */
+        margin-top: 16rem; /* Ajusta a distância para baixo */
+        margin-right: 55%;
+    }
+    
+    .menos-botao img {
+        width: 1rem;  /* Faz a imagem ocupar todo o botão */
+        top: 23px;
+        margin-left: 3px;
+    }
+    
+    .mais-botao {
+        width: 2.5rem;  /* Define um tamanho fixo para o botão */
+        height: 2.5rem; /* Define um tamanho fixo para o botão */
+        padding: 5px; /* Remove espaços internos excessivos */
+        margin-top: 16rem; /* Ajusta a distância para baixo */
+        margin-right: 25%;
+
+    }
+    
+    .mais-botao img {
+        width: 1rem;  /* Faz a imagem ocupar todo o botão */
+        top: 12px;
+        margin-left: 2px;
+    }
+    
+    .botao-imagem {
+        top: 10px; /* Distância do topo */
+        right: 10px; /* Distância da direita */
+        width: 45px; /* Ajuste a largura do botão */
+        height: 35px; /* Ajuste a altura do botão */
+    }
+    
+    .botao-li {
+        top: 10px; 
+        right: 10px; 
+        width: 45px; 
+        height: 35px; 
+    }
+
+    .botao-imagem img {
+        max-width: 34px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: auto;
+        left: 11px;
+        bottom: 8px;
+    }
+    
+    .caixa-total {
+        width: 25rem; /* Mesmo tamanho da .caixa-descricao */
+        max-width: 37.5rem; /* Mantém uma largura máxima */
+        height: 9.8rem; /* Ajuste conforme necessário */
+        padding: 10px; /* Espaçamento interno */
+        margin-top: -13.5rem; /* Ajuste para alinhar com o h3 */
+        left: 45rem; /* Ajuste para alinhar com o h3 */
+    }
+    
+    .caixa-total p {
+        margin: 5px 0; /* Espaçamento entre os textos */
+        font-size: 58px;
+        left: -80px;
+        margin-top: 22px;
+    }
+    
+    .modal {
+        width: 100%;
+        height: 100%;
+        padding-top: 60px;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+        width: 70%;
+    }
+    
+    .modal-top {
+        flex: 0 1 70px;
+    }
+    
+    .modal-left {
+        width: 48%;
+        padding-right: 10px;
+    }
+    
+    .modal-right {
+        width: 48%;
+        padding-left: 10px;
+    }
+    
+    /* Estilo das seções */
+    .modal-section {
+        margin-bottom: 15px;
+    }
+    
+    /* Campo de entrada de texto */
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    
+    /* Estilo do botão */
+    .finalizar-venda {
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+    
+    .total p {
+        font-size: 18px;
+    }
+    
+    .modal-right p {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .valor-container {
+        margin-top: 40px;
+    }
+    
+    .modal-left .modal-section {
+        margin-bottom: 10px;
+    }
+    
+    .modal-right .horizontal-box {
+        padding: 10px;
+    }
+    
+    #vendedoresModal {
+        padding-top: 60px;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+        width: 70%;
+    }
+    
+    .subtitulo {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    /* Estilo para a lista de vendedores */
+    .vendedores-list {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
+    /* Estilo de cada item da lista de vendedores */
+    .vendedores-item {
+        padding: 10px;
+        margin: 5px 0;  /* Espaçamento entre os itens */
+        font-size: 16px;
+        width: 100%;
+    }
+
+    /* Estilo para o rodapé das instruções */
+    .modal-footer {
+        margin-top: 20px;
+    }
+    
+    /* Estilo das instruções */
+    .instruction {
+        padding: 10px;
+        font-size: 14px;
+        width: 48%;
+    }
+    
+    /* Estilo do Modal - CaixaModal e CaixaModalfechada */
+    .modal-content {
+        padding-top: 20px; /* Adiciona um espaço no topo para o título */
+    }
+    
+    .CaixaModal-header h2 {
+        font-size: 24px; /* Tamanho maior para o título */
+        margin-bottom: 20px; /* Espaço abaixo do título */
+    }
+    
+    .CaixaModal-bottom {
+        margin-top: 20px; /* Adiciona espaçamento em cima de tudo */
+    }
+    
+    .CaixaModal-left,
+    .CaixaModal-right {
+        width: 48%; /* Controla a largura de cada coluna */
+    }
+    
+    .modal-section {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .instructions {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    
+    /* Estilo para o botão de Fechar Caixa dentro do modal */
+    #fecharCaixaBtn {
+        bottom: 20px;        /* Ajuste a distância para 20px do fundo do modal */
+        left: 50%;           /* Centraliza o botão horizontalmente */
+        padding: 5px 15px;  /* Tamanho do botão (pequeno) */
+        font-size: 14px;   /* Tamanho de fonte pequeno */
+    }
+}
+=======
 #modalNota {
     display: none;
     position: fixed;
@@ -797,3 +1218,4 @@ input[type="text"] {
 .fechar:hover {
     background-color: #1f456b;
 }
+
