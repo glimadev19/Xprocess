@@ -20,36 +20,52 @@
 
     <div id="menu-lateral" class="menu-lateral">
         <h2>Menu</h2>
-
+    
             <h3>NFC-e</h3>
             <p class="subitem">Abrir</p> 
             <p class="subitem">Imprimir 2° Via</p>
             <p class="subitem">Cancelar</p>
-
+    
             <h3>Carga</h3>
             <p class="subitens">Carga Completa</p>
             <p class="subitens">Carga Rápida</p>
             <p class="subitens">Resumo do Dia</p>
-            <p class="subitens">Exportar</p>
-
+            <p class="subitens" onclick="gerarNotaFiscal()">Exportar</p>
+    
             <h3>Empresa</h3>
             <p class="subItem">Carga da Empresa</p>
             <p class="subItem">Carga Rápida</p>
             <p class="subItem">Resumo do Dia</p>
-            <p class="subItem">Exportar</p>
+            <p class="subitens" onclick="gerarNotaFiscal()">Exportar</p>
+    </div>
+    
+    <div id="modalNota">
+        <div class="nota-fiscal">
+            <h3>NOTA FISCAL ELETRÔNICA</h3>
+            <p>Empresa Exemplo LTDA</p>
+            <p>CNPJ: 12.345.678/0001-99</p>
+            <p id="dataNota"></p>
+            <div class="linha"></div>
+    
+            <div class="itens" id="listaProdutos"></div>
+    
+            <div class="linha"></div>
+            <p class="total">Total: <span id="totalNota"></span></p>
+            <button class="fechar" onclick="fecharModal()">Fechar</button>
+        </div>
     </div>
 
     <!-- Container que será ocultado ao clicar no menu -->
     <div id="menu-container">
         <div class="container-botoes">
-            <button class="botao-com-imagens">
+            <button class="botao-com-imagens botao-F1">
                 <img src="./imgs/F1.png" alt="F1" class="imagem-topo">
                 <img src="./imgs/imagem-f1.png" alt="Caixa" class="imagem-meio">
                 <span class="texto-base">Caixa</span>
             </button>
-            <button class="botao-com-imagens">
+            <button class="botao-com-imagens botao-F2">
                 <img src="./imgs/F2.png" alt="F2" class="imagem-topo">
-                <img src="./imgs/imagem-f2.png" alt="Caixa" class="imagem-meio">
+                <img src="./imgs/imagem-f2.png" alt="Finalizar Venda" class="imagem-meio">
                 <span class="texto-base">Finalizar Venda</span>
             </button>
             <button class="botao-com-imagens">
@@ -57,17 +73,17 @@
                 <img src="./imgs/imagem-f5.png" alt="" class="imagem-meio">
                 <span class="texto-base">Modalidade</span>
             </button>
-            <button class="botao-com-imagens">
-                <img src="./imgs/F7.png" alt="" class="imagem-topo">
-                <img src="./imgs/imagem-f7.png" alt="" class="imagem-meio">
-                <span class="texto-base">Vendedor</span>
+            <button class="botao-com-imagens botao-F7">
+                <img src="./imgs/F7.png" alt="F7" class="imagem-topo">
+                <img src="./imgs/imagem-f7.png" alt="Vendedores" class="imagem-meio">
+                <span class="texto-base">Vendedores</span>
             </button>
-            <button class="botao-com-imagens">
-                <img src="./imgs/F9.png" alt="" class="imagem-topo">
-                <img src="./imgs/imagem-f9.png" alt="" class="imagem-meio">
-                <span class="texto-base">Cliente</span>
+            <button class="botao-com-imagens botao-F9">
+                <img src="./imgs/F9.png" alt="F9" class="imagem-topo">
+                <img src="./imgs/imagem-f9.png" alt="Informar Cliente" class="imagem-meio">
+                <span class="texto-base">Informar Cliente</span>
             </button>
-            <button class="botao-com-imagens">
+            <button class="botao-com-imagens botao-F10">
                 <img src="./imgs/F10.png" alt="" class="imagem-topo">
                 <img src="./imgs/imagem-f10.png" alt="" class="imagem-meio">
                 <span class="texto-base">Buscar</span>
@@ -77,7 +93,7 @@
                 <img src="./imgs/imagem-f11.png" alt="" class="imagem-meio">
                 <span class="texto-base">Venda Assistida</span>
             </button>
-            <button class="botao-com-imagens">
+            <button class="botao-com-imagens botao-F12">
                 <img src="./imgs/F12.png" alt="" class="imagem-topo">
                 <img src="./imgs/imagem-f12.png" alt="" class="imagem-meio">
                 <span class="texto-base">Carga Completa</span>
