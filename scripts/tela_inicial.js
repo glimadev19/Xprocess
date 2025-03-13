@@ -125,21 +125,74 @@ function fecharModalPorClique(event) {
     }
 }
 
-// Abertura/fechamento dos modais ao pressionar teclas específicas
-document.addEventListener('keydown', function(event) {
-    // Modal de Finalizar Venda com F2
-    if (event.key === 'F2') {
-        if (isModalOpen) {
-            fecharModaisAbertos();
-        } else {
-            fecharModaisAbertos();
-            document.getElementById('myModal').style.display = "block";
-            isModalOpen = true;
-        }
+// Função para alternar o modal de caixa (F1)
+function toggleCaixaModal() {
+    if (isCaixaModalFechadaOpen) {
+        document.getElementById('CaixaModalfechada').style.display = "none";
+        isCaixaModalFechadaOpen = false;
+    } else if (isCaixaModalOpen) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('CaixaModal').style.display = "block";
+        isCaixaModalOpen = true;
     }
+}
 
-// Evento de clique para abrir o modal
-document.querySelector(".finalizar-venda").addEventListener("click", function() {
+// Função para alternar o modal de Finalizar Venda (F2)
+function toggleFinalizarVendaModal() {
+    if (isModalOpen) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('myModal').style.display = "block";
+        isModalOpen = true;
+    }
+}
+
+// Função para alternar o modal de Lista de Vendedores (F7)
+function toggleVendedoresModal() {
+    if (isVendedoresModalOpen) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('vendedoresModal').style.display = "block";
+        isVendedoresModalOpen = true;
+        showVendedoresModal();
+    }
+}
+
+// Função para alternar o modal de Informar Cliente (F9)
+function toggleInformarClienteModal() {
+    if (isInformarClienteModalOpen && isInformarMaisDadosModalOpen) {
+        document.getElementById('informarClienteModal').style.display = "none";
+        document.getElementById('informarMaisDadosModal').style.display = "block";
+        isInformarClienteModalOpen = false;
+        isInformarMaisDadosModalOpen = true;
+    } else if (isInformarMaisDadosModalOpen) {
+        document.getElementById('informarMaisDadosModal').style.display = "none";
+        isInformarMaisDadosModalOpen = false;
+    } else if (isInformarClienteModalOpen) {
+        document.getElementById('informarClienteModal').style.display = "none";
+        isInformarClienteModalOpen = false;
+    } else {
+        document.getElementById('informarClienteModal').style.display = "block";
+        isInformarClienteModalOpen = true;
+    }
+}
+
+// Função para alternar o modal de Carga Completa (F12)
+function toggleCargaCompletaModal() {
+    if (iscargaCompletaModal) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('cargaCompletaModal').style.display = "block";
+        iscargaCompletaModal = true;
+    }
+}
+
+function toggleValidacaoUsuarioModal() {
     if (isvalidacaoUsuario) {
         fecharModaisAbertos();
     } else {
@@ -147,76 +200,37 @@ document.querySelector(".finalizar-venda").addEventListener("click", function() 
         document.getElementById('validacaoUsuario').style.display = "block";
         isvalidacaoUsuario = true;
     }
-});
+}
 
+// Evento de clique para cada botão correspondente à tecla de atalho
+document.querySelector(".botao-F1")?.addEventListener("click", toggleCaixaModal);
+document.querySelector(".botao-F2")?.addEventListener("click", toggleFinalizarVendaModal);
+document.querySelector(".botao-F7")?.addEventListener("click", toggleVendedoresModal);
+document.querySelector(".botao-F9")?.addEventListener("click", toggleInformarClienteModal);
+document.querySelector(".botao-F10")?.addEventListener("click", toggleValidacaoUsuarioModal);
+document.querySelector(".botao-F12")?.addEventListener("click", toggleCargaCompletaModal);
 
-    // Modal de Lista de Vendedores com F7
-    if (event.key === 'F7') {
-        if (isVendedoresModalOpen) {
-            fecharModaisAbertos();
-        } else {
-            fecharModaisAbertos();
-            document.getElementById('vendedoresModal').style.display = "block";
-            isVendedoresModalOpen = true;
-            showVendedoresModal();
-        }
-    }
-
-       // Modal de Lista de Vendedores com F7
-       if (event.key === 'F12') {
-        if (iscargaCompletaModal) {
-            fecharModaisAbertos();
-        } else {
-            fecharModaisAbertos();
-            document.getElementById('cargaCompletaModal').style.display = "block";
-            iscargaCompletaModal = true;
-        }
-    }
-
-    // Modal de Caixa com F1
+// Evento de teclado para acionar os modais
+document.addEventListener('keydown', function(event) {
     if (event.key === 'F1') {
-        event.preventDefault(); // Previne o comportamento padrão do F1
-        if (isCaixaModalFechadaOpen) {
-            document.getElementById('CaixaModalfechada').style.display = "none";
-            isCaixaModalFechadaOpen = false;
-        } else if (isCaixaModalOpen) {
-            fecharModaisAbertos();
-        } else {
-            fecharModaisAbertos();
-            document.getElementById('CaixaModal').style.display = "block";
-            isCaixaModalOpen = true;
-        }
+        event.preventDefault(); // Previne a função padrão do F1
+        toggleCaixaModal();
     }
-
-    // Modal de Informar Cliente com F9
+    if (event.key === 'F2') {
+        toggleFinalizarVendaModal();
+    }
+    if (event.key === 'F7') {
+        toggleVendedoresModal();
+    }
     if (event.key === 'F9') {
-        event.preventDefault(); // Previne o comportamento padrão do F9
-        if (isInformarClienteModalOpen && isInformarMaisDadosModalOpen) {
-            document.getElementById('informarClienteModal').style.display = "none";
-            document.getElementById('informarMaisDadosModal').style.display = "block";
-            isInformarClienteModalOpen = false;
-            isInformarMaisDadosModalOpen = true;
-        } else if (isInformarMaisDadosModalOpen) {
-            document.getElementById('informarMaisDadosModal').style.display = "none";
-            isInformarMaisDadosModalOpen = false;
-        } else if (isInformarClienteModalOpen) {
-            document.getElementById('informarClienteModal').style.display = "none";
-            isInformarClienteModalOpen = false;
-        } else {
-            document.getElementById('informarClienteModal').style.display = "block";
-            isInformarClienteModalOpen = true;
-        }
+        event.preventDefault(); // Previne a função padrão do F9
+        toggleInformarClienteModal();
     }
-
-    // Modal de Pesquisar Produto com F10
     if (event.key === 'F10') {
-        if (isPesquisarProdutoModalOpen) {
-            fecharModaisAbertos();
-        } else {
-            fecharModaisAbertos();
-            document.getElementById('pesquisarProdutoModal').style.display = "block";
-            isPesquisarProdutoModalOpen = true;
-        }
+        toggleValidacaoUsuarioModal();
+    }
+    if (event.key === 'F12') {
+        toggleCargaCompletaModal();
     }
 
     // Fechar o modal ao pressionar ESC
