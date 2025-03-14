@@ -150,6 +150,21 @@ function toggleFinalizarVendaModal() {
     }
 }
 
+// Adiciona evento de clique ao botão da lixeira para abrir o modal validacaoUsuario
+document.querySelectorAll(".botao-li" ).forEach(botao => {
+    botao.addEventListener("click", function () {
+        toggleValidacaoUsuarioModal();
+    });
+});
+
+// Adiciona evento de clique ao botão da lixeira para abrir o modal validacaoUsuario
+document.querySelectorAll(".botao-pequeno" ).forEach(botao => {
+    botao.addEventListener("click", function () {
+        toggleValidacaoUsuarioModal();
+    });
+});
+
+
 // Função para alternar o modal de Lista de Vendedores (F7)
 function toggleVendedoresModal() {
     if (isVendedoresModalOpen) {
