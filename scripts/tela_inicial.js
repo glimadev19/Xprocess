@@ -164,6 +164,12 @@ document.querySelectorAll(".botao-pequeno" ).forEach(botao => {
     });
 });
 
+// Adiciona evento de clique ao botão da lixeira para abrir o modal validacaoUsuario
+document.querySelectorAll(".finalizar-venda" ).forEach(botao => {
+    botao.addEventListener("click", function () {
+        toggleValidacaoUsuarioModal();
+    });
+});
 
 // Função para alternar o modal de Lista de Vendedores (F7)
 function toggleVendedoresModal() {
