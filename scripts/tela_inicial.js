@@ -8,6 +8,7 @@ let isInformarMaisDadosModalOpen = false; // Para o modal Informar Mais Dados
 let isPesquisarProdutoModalOpen = false; // Para o modal de Pesquisar Produto
 let iscargaCompletaModal = false;
 let isvalidacaoUsuario = false;
+
 // Função para fechar todos os modais abertos
 function fecharModaisAbertos() {
     if (isModalOpen) {
@@ -302,6 +303,10 @@ document.addEventListener("keydown", function (event) {
     } else if (event.key === "+" || event.key === "=") { // "=" porque no teclado numérico ABNT2 "+" está no shift do "="
         alterarQuantidade(1);
     }
+});
+// Garante que o modal comece fechado
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("modalNota").style.display = "none";
 });
 
 function gerarNotaFiscal() {
