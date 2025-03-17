@@ -49,7 +49,7 @@ header img {
 #menu-lateral.aberto {
     left: 0px; /* Posiciona o menu na tela */
     box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra quando aberto */
-}
+}   
 
 .menu-lateral h2 {
     margin: 0 0 40px 0; /* Adiciona espaçamento abaixo do título */
