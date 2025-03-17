@@ -140,6 +140,20 @@ function toggleCaixaModal() {
     }
 }
 
+// Função para alternar o modal de caixa (F1)
+function togglePesquisarProdutoModalOpen() {
+    if (isPesquisarProdutoModalOpen) {
+        document.getElementById('pesquisarProdutoModal').style.display = "none";
+        isPesquisarProdutoModalOpen = false;
+    } else if (isPesquisarProdutoModalOpen) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('pesquisarProdutoModal').style.display = "block";
+        isPesquisarProdutoModalOpen = true;
+    }
+}
+
 // Função para alternar o modal de Finalizar Venda (F2)
 function toggleFinalizarVendaModal() {
     if (isModalOpen) {
@@ -229,7 +243,7 @@ document.querySelector(".botao-F1")?.addEventListener("click", toggleCaixaModal)
 document.querySelector(".botao-F2")?.addEventListener("click", toggleFinalizarVendaModal);
 document.querySelector(".botao-F7")?.addEventListener("click", toggleVendedoresModal);
 document.querySelector(".botao-F9")?.addEventListener("click", toggleInformarClienteModal);
-document.querySelector(".botao-F10")?.addEventListener("click", toggleValidacaoUsuarioModal);
+document.querySelector(".botao-F10")?.addEventListener("click", togglePesquisarProdutoModalOpen);
 document.querySelector(".botao-F12")?.addEventListener("click", toggleCargaCompletaModal);
 
 // Evento de teclado para acionar os modais
@@ -249,7 +263,7 @@ document.addEventListener('keydown', function(event) {
         toggleInformarClienteModal();
     }
     if (event.key === 'F10') {
-        toggleValidacaoUsuarioModal();
+        togglePesquisarProdutoModalOpen();
     }
     if (event.key === 'F12') {
         toggleCargaCompletaModal();

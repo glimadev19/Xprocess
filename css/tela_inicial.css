@@ -27,6 +27,7 @@ header img {
     cursor: pointer;
 }
 #menu-lateral {
+    cursor: pointer;
     position: absolute;
     top: 90px; /* Ajuste para ficar abaixo do header */
     left: -250px; /* Inicialmente fora da tela */
@@ -134,6 +135,7 @@ header img {
 }
 
 h2 {
+    align-self: center;
     margin-top: 2rem;
     margin-left: 2rem; 
     font-size: 22px;
@@ -504,6 +506,18 @@ h4 {
 
 }
 
+#informarClienteModal h2 {
+    text-align: center;
+}
+
+#informarClienteModal .modal-left {
+    margin-left: 20px;
+}
+
+#informarClienteModal .modal-right {
+    margin-top: 8px;
+}
+
 /* Parte superior do Modal (horizontal) */
 .modal-top {
     flex: 0 1 70px; /* Controla o tamanho do topo */
@@ -538,6 +552,7 @@ h4 {
 
 /* Campo de entrada de texto */
 .modal-section .input-field {
+    color: #808080;
     width: 88%;
     padding: 10px;
     margin-top: 5px;
@@ -671,7 +686,7 @@ h4 {
     text-align: center;
     margin: 10px 0;
     font-weight: bold;
-    color: #555;
+    color: #1f456b;
 }
 
 /* Estilo para a lista de vendedores */
@@ -683,6 +698,7 @@ h4 {
 /* Estilo de cada item da lista de vendedores */
 .vendedores-item {
     background-color: #f4f4f4; /* Cor de fundo da caixinha */
+    color: #1f456b;
     padding: 10px;
     margin: 5px 0;  /* Espaçamento entre os itens */
     text-align: center;  /* Centraliza o texto */
@@ -731,11 +747,23 @@ h4 {
     padding-top: 20px; /* Adiciona um espaço no topo para o título */
 }
 
+#informarMaisDadosBtn {
+    width: 60%;
+    height: 5vh;
+    margin-top: 9rem;
+    margin-left: 5.5rem;
+    background-color: #5C84AC;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 .CaixaModal-header h2 {
-    text-align: center; /* Centraliza o título */
-    font-size: 24px; /* Tamanho maior para o título */
+    text-align: center;
+    font-size: 24px; 
     font-weight: bold;
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-bottom: 20px;
 }
 
 .CaixaModal-bottom {
@@ -752,6 +780,7 @@ h4 {
 }
 
 .modal-section {
+    color: #5C84AC;
     margin-bottom: 20px;
 }
 
@@ -1226,7 +1255,7 @@ input[type="text"] {
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     font-family: Arial, sans-serif;
-    border: 2px solid black;
+    border: none;
 }
 
 .nota-fiscal h3 {
