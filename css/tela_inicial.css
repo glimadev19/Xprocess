@@ -545,10 +545,7 @@ h4 {
     padding-left: 10px;
 }
 
-/* Estilo das seções */
-.modal-section {
-    margin-bottom: 15px;
-}
+
 
 /* Campo de entrada de texto */
 .modal-section .input-field {
@@ -655,17 +652,6 @@ h4 {
     overflow: auto;
     padding-top: 60px;
 }
-
-/* Modal Content */
-.modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 45%;
-    border-radius: 10px; /* Borda arredondada */
-}
-
 /* Fechar botão */
 .close {
     color: #aaa;
@@ -705,10 +691,6 @@ h4 {
     font-size: 16px;
     display: inline-block;  /* Faz com que fiquem organizados em linha */
     width: 100%;
-}
-
-/* Remover borda para as caixinhas */
-.vendedores-item {
     border: none;
 }
 
@@ -738,13 +720,6 @@ h4 {
 /* Instrução do lado direito */
 .right {
     text-align: right;
-}
-
-/* Estilo do Modal - CaixaModal e CaixaModalfechada */
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px; /* Adiciona um espaço no topo para o título */
 }
 
 #informarMaisDadosBtn {
