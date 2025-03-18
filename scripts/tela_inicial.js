@@ -198,20 +198,15 @@ function toggleVendedoresModal() {
     }
 }
 
-// Função para alternar o modal de Informar Cliente (F9)
+// Função para alternar o modal de caixa (F9)
 function toggleInformarClienteModal() {
-    if (isInformarClienteModalOpen && isInformarMaisDadosModalOpen) {
+    if (isInformarClienteModalOpen) {
         document.getElementById('informarClienteModal').style.display = "none";
-        document.getElementById('informarMaisDadosModal').style.display = "block";
         isInformarClienteModalOpen = false;
-        isInformarMaisDadosModalOpen = true;
-    } else if (isInformarMaisDadosModalOpen) {
-        document.getElementById('informarMaisDadosModal').style.display = "none";
-        isInformarMaisDadosModalOpen = false;
     } else if (isInformarClienteModalOpen) {
-        document.getElementById('informarClienteModal').style.display = "none";
-        isInformarClienteModalOpen = false;
+        fecharModaisAbertos();
     } else {
+        fecharModaisAbertos();
         document.getElementById('informarClienteModal').style.display = "block";
         isInformarClienteModalOpen = true;
     }
@@ -259,7 +254,6 @@ document.addEventListener('keydown', function(event) {
         toggleVendedoresModal();
     }
     if (event.key === 'F9') {
-        event.preventDefault(); // Previne a função padrão do F9
         toggleInformarClienteModal();
     }
     if (event.key === 'F10') {
