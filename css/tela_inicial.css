@@ -805,6 +805,12 @@ input[type="text"] {
     box-shadow: 0 0 0 2px #3700b3;  /* Adiciona um destaque quando o botão é focado */
 }
 
+.modal-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
    /* Responsividade */
    @media (max-width: 768px) {
     header {
