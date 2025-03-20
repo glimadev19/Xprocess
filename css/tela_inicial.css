@@ -419,7 +419,6 @@ h4 {
     justify-content: center; /* Centraliza horizontalmente */
 }
 
-
 .botao-imagem:hover {
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5); /* Efeito ao passar o mouse */
 }
@@ -545,8 +544,6 @@ h4 {
     width: 48%;
     padding-left: 10px;
 }
-
-
 
 /* Campo de entrada de texto */
 .modal-section .input-field {
@@ -1285,3 +1282,92 @@ input[type="text"] {
     background-color: #1f456b;
 }
 
+#visualizacaoItens {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#visualizacaoItens .modal-content {
+    background-color: #fff;
+    margin: 2% auto; /* Mantém centralizada */
+    padding: 20px;
+    width: 50%; /* Mantém a mesma largura */
+    height: 60vh; /* Aumenta a altura para 70% da altura da tela */
+    max-height: 90vh; /* Garante que não ultrapasse a tela */
+    border-radius: 15px;
+    border: 2.5px solid #295B8D;
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+}
+
+
+#visualizacaoItens .modal-header {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#visualizacaoItens .modal-body {
+    margin-top: 10px;
+}
+
+#visualizacaoItens table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#visualizacaoItens table, 
+#visualizacaoItens th, 
+#visualizacaoItens td {
+    border: 2px solid #295B8D;
+    text-align: center;
+    padding: 8px;
+}
+
+#visualizacaoItens th:nth-child(1),
+#visualizacaoItens td:nth-child(1) {
+    width: 17%; /* Ajuste conforme necessário */
+    min-width: 80px; /* Define um tamanho mínimo */
+    max-width: 120px; /* Define um tamanho máximo */
+}
+
+#visualizacaoItens th:nth-child(2),
+#visualizacaoItens td:nth-child(2) {
+    width: 15%; /* Ajuste conforme necessário */
+    min-width: 80px; /* Define um tamanho mínimo */
+    max-width: 120px; /* Define um tamanho máximo */
+}
+
+#visualizacaoItens th:nth-child(3),
+#visualizacaoItens td:nth-child(3) {
+    width: 50%; /* Ajuste conforme necessário */
+    min-width: 80px; /* Define um tamanho mínimo */
+    max-width: 120px; /* Define um tamanho máximo */
+}
+
+#visualizacaoItens th {
+    background-color: white;
+    color: #295B8D;
+    font-family: 'Pridi';
+    font-weight: normal;
+}
+
+.imagens-item {
+    display: flex;
+    flex-direction: column; /* Deixa as imagens em coluna (uma abaixo da outra) */
+    align-items: center; /* Centraliza as imagens horizontalmente */
+    gap: 5px; /* Espaçamento entre as imagens */
+}
+
+.imagens-item img {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: 50px;
+    border-radius: 5px; /* Deixa as bordas levemente arredondadas */
+}
