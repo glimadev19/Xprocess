@@ -206,7 +206,6 @@ h4 {
     max-width: 600px; /* Define uma largura máxima */
     height: 9rem; /* Ajuste conforme necessário */
     background-color: #acc7e0; /* Cor de fundo */
-    border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 15px; /* Espaçamento interno */
     margin: 2rem; /* Espaço entre o h2 e a caixa */
@@ -459,7 +458,6 @@ h4 {
     max-width: 37.5rem; /* Mantém uma largura máxima */
     height: 9.8rem; /* Ajuste conforme necessário */
     background-color: #295B8D; /* Mesma cor de fundo */
-    border: 2px solid #ccc; /* Borda para destacar */
     border-radius: 15px; /* Cantos arredondados */
     padding: 10px; /* Espaçamento interno */
     margin-top: -13.5rem; /* Ajuste para alinhar com o h3 */
@@ -499,7 +497,7 @@ h4 {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 45%;
+    width: 48%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -1301,7 +1299,7 @@ input[type="text"] {
     height: 60vh; /* Aumenta a altura para 70% da altura da tela */
     max-height: 90vh; /* Garante que não ultrapasse a tela */
     border-radius: 15px;
-    border: 2.5px solid #295B8D;
+    border: none;
     overflow-y: auto; /* Adiciona rolagem se necessário */
 }
 
