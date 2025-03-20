@@ -8,6 +8,7 @@ let isInformarMaisDadosModalOpen = false; // Para o modal Informar Mais Dados
 let isPesquisarProdutoModalOpen = false; // Para o modal de Pesquisar Produto
 let iscargaCompletaModal = false;
 let isvalidacaoUsuario = false;
+let isVisualizacaoItens = false;
 
 // Função para fechar todos os modais abertos
 function fecharModaisAbertos() {
@@ -52,6 +53,10 @@ function fecharModaisAbertos() {
     if (isvalidacaoUsuario) {
         document.getElementById('validacaoUsuario').style.display = "none";
         isvalidacaoUsuario= false;
+    }
+    if (isVisualizacaoItens) {
+        document.getElementById('visualizacaoItens').style.display = "none";
+        isVisualizacaoItens = false;
     }
 }
 
@@ -123,6 +128,7 @@ function fecharModalPorClique(event) {
         if (event.target.id === 'pesquisarProdutoModal') isPesquisarProdutoModalOpen = false;
         if (event.target.id === 'cargaCompletaModal') iscargaCompletaModal = false;
         if (event.target.id === 'validacaoUsuario') isvalidacaoUsuario = false;
+        if (event.target.id === 'visualizacaoItens') isVisualizacaoItens = false;
     }
 }
 
@@ -186,6 +192,12 @@ document.querySelectorAll(".finalizar-venda" ).forEach(botao => {
     });
 });
 
+document.querySelectorAll(".botao-pequeno1").forEach(botao => {
+    botao.addEventListener("click", function () {
+        toggleVisualizacaoItensModal();
+    });
+});
+
 // Função para alternar o modal de Lista de Vendedores (F7)
 function toggleVendedoresModal() {
     if (isVendedoresModalOpen) {
@@ -230,6 +242,16 @@ function toggleValidacaoUsuarioModal() {
         fecharModaisAbertos();
         document.getElementById('validacaoUsuario').style.display = "block";
         isvalidacaoUsuario = true;
+    }
+}
+
+function toggleVisualizacaoItensModal() {
+    if (isVisualizacaoItens) {
+        fecharModaisAbertos();
+    } else {
+        fecharModaisAbertos();
+        document.getElementById('visualizacaoItens').style.display = "block";
+        isVisualizacaoItens = true;
     }
 }
 
