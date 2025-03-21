@@ -204,6 +204,19 @@ document.querySelectorAll(".botao-pequeno1").forEach(botao => {
     });
 });
 
+document.getElementById('seta-toggle').addEventListener('click', function() {
+    var seta = document.getElementById('seta-toggle');
+    var containerBotoes = document.querySelector('.container-botoes');
+
+    containerBotoes.classList.toggle('hidden');
+
+    if (seta.style.right === '-100px' || seta.style.right === '') {
+        seta.style.right = '200px'; // Move para o lado
+    } else {
+        seta.style.right = '-100px'; // Retorna à posição original
+    }
+});
+
 document.getElementById("imagem-doce").addEventListener("click", function () {
     document.getElementById("visualizacaoItens").style.display = "none";
     document.getElementById("novoModal").style.display = "block";
