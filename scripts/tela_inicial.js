@@ -9,6 +9,7 @@ let isPesquisarProdutoModalOpen = false; // Para o modal de Pesquisar Produto
 let iscargaCompletaModal = false;
 let isvalidacaoUsuario = false;
 let isVisualizacaoItens = false;
+let isnovoModal = false;
 
 // Função para fechar todos os modais abertos
 function fecharModaisAbertos() {
@@ -57,6 +58,10 @@ function fecharModaisAbertos() {
     if (isVisualizacaoItens) {
         document.getElementById('visualizacaoItens').style.display = "none";
         isVisualizacaoItens = false;
+    }
+    if (isnovoModal) {
+        document.getElementById('novoModal').style.display = "none";
+        isnovoModal = false;
     }
 }
 
@@ -129,6 +134,7 @@ function fecharModalPorClique(event) {
         if (event.target.id === 'cargaCompletaModal') iscargaCompletaModal = false;
         if (event.target.id === 'validacaoUsuario') isvalidacaoUsuario = false;
         if (event.target.id === 'visualizacaoItens') isVisualizacaoItens = false;
+        if (event.target.id === 'novoModal') isnovoModal = false;
     }
 }
 
@@ -198,6 +204,11 @@ document.querySelectorAll(".botao-pequeno1").forEach(botao => {
     });
 });
 
+document.getElementById("imagem-doce").addEventListener("click", function () {
+    document.getElementById("visualizacaoItens").style.display = "none";
+    document.getElementById("novoModal").style.display = "block";
+});
+
 // Função para alternar o modal de Lista de Vendedores (F7)
 function toggleVendedoresModal() {
     if (isVendedoresModalOpen) {
@@ -253,6 +264,27 @@ function toggleVisualizacaoItensModal() {
         document.getElementById('visualizacaoItens').style.display = "block";
         isVisualizacaoItens = true;
     }
+}
+
+// Selecione todas as imagens com a classe 'clicavel'
+document.querySelectorAll('.clicavel').forEach(imagem => {
+    imagem.addEventListener('click', function () {
+        document.getElementById("visualizacaoItens").style.display = "none";
+        document.getElementById("novoModal").style.display = "block";
+
+        // Atualize o conteúdo do modal com a imagem clicada
+        var imagemSrc = imagem.src;
+        document.getElementById("imagemExpandida").src = imagemSrc;
+
+        // Obtenha o nome da imagem usando o atributo 'data-nome'
+        var nomeImagem = imagem.getAttribute('data-nome');  // Obtém o valor do 'data-nome'
+        document.getElementById("nomeImagem").textContent = nomeImagem;  // Atualiza o nome no modal
+    });
+});
+
+
+function fecharNovoModal() {
+    document.getElementById("novoModal").style.display = "none";
 }
 
 // Evento de clique para cada botão correspondente à tecla de atalho
