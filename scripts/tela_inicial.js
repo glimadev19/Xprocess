@@ -212,10 +212,13 @@ document.getElementById('seta-toggle').addEventListener('click', function() {
 
     if (seta.style.right === '-100px' || seta.style.right === '') {
         seta.style.right = '200px'; // Move para o lado
+        seta.src = './imgs/seta1.png'; // Seta virada para a direita
     } else {
         seta.style.right = '-100px'; // Retorna à posição original
+        seta.src = './imgs/Seta.png'; // Seta virada para a esquerda (ou outra imagem que você preferir)
     }
 });
+
 
 document.getElementById("imagem-doce").addEventListener("click", function () {
     document.getElementById("visualizacaoItens").style.display = "none";
