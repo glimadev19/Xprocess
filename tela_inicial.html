@@ -320,9 +320,9 @@
                     <tr>
                         <td>
                             <div class="imagens-item">
-                                <img src="./imgs/doce.png" alt="Imagem 1">
-                                <img src="./imgs/ferramenta.png" alt="Imagem 2">
-                                <img src="./imgs/pipoca.png" alt="Imagem 3">
+                                <img id="imagem-doce" src="./imgs/doce.png" alt="Imagem 1" class="clicavel" data-nome="Beijos - Fini">
+                                <img id="imagem-ferramenta" src="./imgs/ferramenta.png" alt="Imagem 2" class="clicavel" data-nome="Ferramenta">
+                                <img id="imagem-pipoca" src="./imgs/pipoca.png" alt="Imagem 3" class="clicavel" data-nome="Pipoca">
                             </div>
                         </td>
                         <td></td>
@@ -331,6 +331,21 @@
                     </tr>
                 </tbody>                
             </table>
+        </div>
+    </div>
+</div>
+
+<div id="novoModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="tituloImagem">Visualização de Itens</h2>
+            <span class="close" onclick="fecharNovoModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="imagem-container">
+                <img id="imagemExpandida" class="imagem-centralizada" src="" alt="Imagem Expandida">
+            </div>
+            <p id="nomeImagem" contenteditable="true"></p> <!-- Nome abaixo da imagem -->
         </div>
     </div>
 </div>
