@@ -1296,7 +1296,7 @@ input[type="text"] {
     margin: 2% auto; /* Mantém centralizada */
     padding: 20px;
     width: 50%; /* Mantém a mesma largura */
-    height: 60vh; /* Aumenta a altura para 70% da altura da tela */
+    height: 60vh; /* Aumenta a altura para 60% da altura da tela */
     max-height: 90vh; /* Garante que não ultrapasse a tela */
     border-radius: 15px;
     border: none;
@@ -1368,4 +1368,85 @@ input[type="text"] {
     width: 50px; /* Ajuste o tamanho conforme necessário */
     height: 50px;
     border-radius: 5px; /* Deixa as bordas levemente arredondadas */
+}
+
+#novoModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#novoModal .modal-content {
+    background-color: #fff;
+    margin: 2% auto; /* Mantém centralizada */
+    padding: 20px;
+    width: 40%; /* Mantém a mesma largura */
+    height: 63vh; /* Aumenta a altura para 60% da altura da tela */
+    max-height: 90vh; /* Garante que não ultrapasse a tela */
+    border-radius: 15px;
+    border: none;
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+    border: 3px solid #295B8D;
+}
+
+.clicavel {
+    cursor: pointer;
+}
+
+#novoModal .modal-header {
+    text-align: center;
+    width: 100%;
+}
+
+#novoModal .close {
+    position: relative;
+    top: -85px;
+}
+
+#novoModal .imagem-centralizada {
+    display: block;
+    width: 80%;  /* Ajuste conforme necessário */
+    max-width: 600px;  /* Define um tamanho máximo */
+    max-height: 80vh;  /* Aumenta a altura máxima */
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#novoModal .imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#novoModal #imagemExpandida {
+    width: 40%; /* Ajuste para maior tamanho */
+    max-width: 500px; /* Aumenta o tamanho máximo */
+    max-height: 90vh;
+    display: block;
+}
+
+#novoModal .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    overflow: hidden; /* Impede que o conteúdo force a barra de rolagem */
+}
+
+#novoModal #nomeImagem {
+    font-size: 25px;
+    font-family: 'Pridi';
+    color: #295B8D;
+    margin-top: 50px; /* Reduzi para evitar o overflow */
+    padding: 5px;
+    max-width: 100%; /* Garante que o nome não ultrapasse os limites */
+    white-space: nowrap; /* Impede que o texto quebre para outra linha */
+    text-overflow: ellipsis; /* Adiciona "..." se o nome for muito longo */
 }
