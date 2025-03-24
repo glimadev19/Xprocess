@@ -298,9 +298,52 @@ document.querySelectorAll('.clicavel').forEach(imagem => {
     });
 });
 
+// Seleciona todas as imagens clicáveis
+const imagens = Array.from(document.querySelectorAll('.clicavel'));
+let indiceAtual = 0;
 
+// Elementos do modal
+const modal = document.getElementById("novoModal");
+const imagemExpandida = document.getElementById("imagemExpandida");
+const nomeImagem = document.getElementById("nomeImagem");
+const botaoEsquerda = document.getElementById("botaoEsquerda");
+const botaoDireita = document.getElementById("botaoDireita");
+
+// Adiciona evento de clique para abrir o modal
+imagens.forEach((imagem, index) => {
+    imagem.addEventListener("click", function () {
+        indiceAtual = index;
+        atualizarModal();
+        modal.style.display = "block";
+    });
+});
+
+// Atualiza a imagem e o nome no modal
+function atualizarModal() {
+    const imagemSelecionada = imagens[indiceAtual];
+    imagemExpandida.src = imagemSelecionada.src;
+    nomeImagem.textContent = imagemSelecionada.dataset.nome;
+}
+
+// Evento para botão "Anterior"
+botaoEsquerda.addEventListener("click", function () {
+    if (indiceAtual > 0) {
+        indiceAtual--;
+        atualizarModal();
+    }
+});
+
+// Evento para botão "Próximo"
+botaoDireita.addEventListener("click", function () {
+    if (indiceAtual < imagens.length - 1) {
+        indiceAtual++;
+        atualizarModal();
+    }
+});
+
+// Fecha o modal ao clicar no "X"
 function fecharNovoModal() {
-    document.getElementById("novoModal").style.display = "none";
+    modal.style.display = "none";
 }
 
 // Evento de clique para cada botão correspondente à tecla de atalho
