@@ -329,7 +329,7 @@
                             <div class="imagens-item">
                                 <img id="imagem-doce" src="./imgs/doce.png" alt="Imagem 1" class="clicavel" data-nome="Beijos - Fini">
                                 <img id="imagem-ferramenta" src="./imgs/ferramenta.png" alt="Imagem 2" class="clicavel" data-nome="Ferramenta">
-                                <img id="imagem-pipoca" src="./imgs/pipoca.png" alt="Imagem 3" class="clicavel" data-nome="Pipoca">
+                                <img id="imagem-pipoca" src="./imgs/pipoca.png" alt="Imagem 3" class="clicavel" data-nome="Salgado Cheetos">
                             </div>
                         </td>
                         <td></td>
@@ -342,6 +342,7 @@
     </div>
 </div>
 
+<!-- Modal de Exibição da Imagem -->
 <div id="novoModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -352,7 +353,17 @@
             <div class="imagem-container">
                 <img id="imagemExpandida" class="imagem-centralizada" src="" alt="Imagem Expandida">
             </div>
-            <p id="nomeImagem" contenteditable="true"></p> <!-- Nome abaixo da imagem -->
+
+            <!-- Botões ao lado do nome -->
+            <div class="botoes-container">
+                <button id="botaoEsquerda">
+                    <img src="./imgs/Seta.png" alt="Anterior">
+                </button>
+                <p id="nomeImagem" contenteditable="true"></p> <!-- Nome abaixo da imagem -->
+                <button id="botaoDireita">
+                    <img src="./imgs/seta1.png" alt="Próximo">
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -573,6 +584,7 @@
         </div>
     </div>
 </div>
+
 <div class="area-item">
     <h4>(Nome do Item)</h4>
     <div class="espaco-em-branco">
