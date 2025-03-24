@@ -1460,9 +1460,43 @@ input[type="text"] {
     font-size: 25px;
     font-family: 'Pridi';
     color: #295B8D;
-    margin-top: 50px; /* Reduzi para evitar o overflow */
+    margin-top: 30px; /* Reduzi para evitar o overflow */
     padding: 5px;
     max-width: 100%; /* Garante que o nome não ultrapasse os limites */
     white-space: nowrap; /* Impede que o texto quebre para outra linha */
     text-overflow: ellipsis; /* Adiciona "..." se o nome for muito longo */
+}
+
+#novoModal .botoes-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Permite posicionar os botões de forma absoluta dentro do container */
+    margin-top: 20px;
+    width: 100%; /* Garante que ocupe toda a largura do modal */
+}
+
+#novoModal .botoes-container button {
+    background: none;
+    border: none;
+    padding: 5px;
+    position: absolute; /* Permite mover os botões para os cantos */
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+#novoModal .botoes-container #botaoEsquerda {
+    margin-top: 4px;
+    left: 10px; /* Move para a esquerda */
+}
+
+#novoModal .botoes-container #botaoDireita {
+    margin-top: 4px;
+    right: 10px; /* Move para a direita */
+}
+
+#novoModal .botoes-container img {
+    width: 35px; /* Ajuste o tamanho da imagem do botão */
+    height: 35px;
+    cursor: pointer;
 }
