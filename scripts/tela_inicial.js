@@ -282,6 +282,23 @@ function toggleVisualizacaoItensModal() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const userIcon = document.querySelector(".user");
+    const userBox = document.getElementById("user-box");
+
+    userIcon.addEventListener("click", function(event) {
+        event.stopPropagation(); // Evita que o clique feche imediatamente
+        userBox.classList.toggle("show"); // Alterna a visibilidade com transição
+    });
+
+    // Fecha a caixinha ao clicar fora dela
+    document.addEventListener("click", function(event) {
+        if (!userBox.contains(event.target) && event.target !== userIcon) {
+            userBox.classList.remove("show"); // Remove a classe para esconder com transição
+        }
+    });
+});
+
 // Selecione todas as imagens com a classe 'clicavel'
 document.querySelectorAll('.clicavel').forEach(imagem => {
     imagem.addEventListener('click', function () {
