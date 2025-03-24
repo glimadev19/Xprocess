@@ -21,6 +21,61 @@ header img {
     height: 50px;
 }
 
+.user-box {
+    position: absolute;
+    top: -150px; /* Inicialmente fora da tela */
+    right: 40px;
+    background-color: #5C84AC;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    width: 130px;
+    height: auto;
+    text-align: left;
+    z-index: 2000;
+    opacity: 0; /* Invisível inicialmente */
+    transition: top 0.4s ease, opacity 0.4s ease; /* Adiciona a transição suave */
+}
+
+.user-box.show {
+    top: 60px; /* Posição final quando visível */
+    opacity: 1; /* Torna visível */
+}
+
+.user-box-img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px;
+}
+
+.user-option {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Diminui o espaço entre o ícone e o texto */
+    padding: 5px 0; /* Menos espaçamento ao redor do texto */
+    cursor: pointer;
+}
+
+.user-option img {
+    width: 20px;
+    height: 20px;
+}
+
+.user-option p {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Pridi';
+    font-size: 14px; /* Tamanho menor para reduzir o espaço */
+    font-weight: bold;
+}
+
+.user-option:hover {
+    background-color: #4f769c;
+    border-radius: 5px;
+}
+
 /* Logo à esquerda */
 .menu {
     height: 26px; /* Ajuste da altura da logo */
