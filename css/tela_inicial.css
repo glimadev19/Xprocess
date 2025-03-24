@@ -167,10 +167,11 @@ h4 {
 .seta {
     position: absolute; /* Posiciona a seta em relação ao #menu-container */
     right: -100px; /* Distância da seta em relação ao container */
-    top: 15%; /* Ajuste esse valor para mover a seta mais para baixo */
+    top: 5%; /* Ajuste esse valor para mover a seta mais para baixo */
     cursor: pointer; /* Cursor clicável */
     transition: right 0.3s ease; /* Transição suave para o movimento */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 #menu-container {
