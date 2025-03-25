@@ -1,0 +1,181 @@
+/* Base Styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #295B8D;
+    border-bottom: 2px solid #ddd;
+    z-index: 10;
+}
+
+header img {
+    height: 50px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #dc2626;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ef4444;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ef4444;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.md-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.p-3 {
+    padding: 0.75rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+/* Text Styles */
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+/* Flex Utilities */
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+/* Icon Styles */
+.fa, .fas, .far, .fal, .fab {
+    margin-right: 0.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+/* Color Utilities */
+.text-blue-500 { color: #3b82f6; }
+.text-green-500 { color: #10b981; }
+.text-yellow-500 { color: #f59e0b; }
+.text-gray-700 { color: #374151; }
+.text-blue-600 { color: #2563eb; }
+.text-red-500 { color: #ef4444; }
+.text-blue-400 { color: #60a5fa; }
+.text-orange-500 { color: #f97316; }
+.text-teal-500 { color: #14b8a6; }
+.text-purple-500 { color: #a855f7; }
+.text-red-400 { color: #f87171; }
+.text-red-600 { color: #dc2626; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-500 { color: #6b7280; }
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .md-grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .md-grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

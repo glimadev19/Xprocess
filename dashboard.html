@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Segurança</title>
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="menu" id="menu-toggle" src="./imgs/menu.png" alt="Ícone de Menu">
+        <div class="empresa">
+            <div class="empresa-user">Empresa</div>
+        </div>
+        <img class="user" id="user-icon" src="./imgs/user-tela-inicial.png" alt="Ícone de Usuário">
+        
+        <!-- Caixa oculta inicialmente -->
+        <div class="user-box" id="user-box">
+            <img src="./imgs/user.png" alt="Ícone de Usuário" class="user-box-img">
+        </div>        
+    </header>  
+    <div class="container">
+        <h1>Dashboard de Segurança</h1>
+        
+        <div class="grid grid-cols-1 md-grid-cols-2 gap-4">
+            <!-- Ações -->
+            <div>
+                <h2>Ações</h2>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="card p-4">
+                        <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
+                        <div>
+                            <h3 class="font-semibold">Prevenções Ativas</h3>
+                            <p class="text-2xl font-bold">42</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <i class="fas fa-comment-medical text-green-500 text-2xl"></i>
+                        <div>
+                            <h3 class="font-semibold">Prevenções Reativas</h3>
+                            <p class="text-2xl font-bold">28</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ocorrências -->
+            <div>
+                <h2>Ocorrências</h2>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="card p-4">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 text-2xl"></i>
+                        <div>
+                            <h3 class="font-semibold">Ocorrências totais</h3>
+                            <p class="text-2xl font-bold">135</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <i class="fas fa-skull text-gray-700 text-2xl"></i>
+                        <div>
+                            <h3 class="font-semibold">Vítimas fatais</h3>
+                            <p class="text-2xl font-bold">3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md-grid-cols-4 gap-4 mt-6">
+            <!-- Ocorrências Policiais -->
+            <div>
+                <h3>Ocorrências Policiais</h3>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="card p-3">
+                        <i class="fas fa-badge-sheriff text-blue-600 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Roubo ou Furto</h3>
+                            <p class="text-xl font-bold">11</p>
+                        </div>
+                    </div>
+                    <div class="card p-3">
+                        <i class="fas fa-people-pulling text-red-500 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Briga</h3>
+                            <p class="text-xl font-bold">15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Busca e Resgate -->
+            <div>
+                <h3>Busca e Resgate</h3>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="card p-3">
+                        <i class="fas fa-person-drowning text-blue-400 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Afogamentos</h3>
+                            <p class="text-xl font-bold">8</p>
+                        </div>
+                    </div>
+                    <div class="card p-3">
+                        <i class="fas fa-child-reaching text-orange-500 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Crianças perdidas</h3>
+                            <p class="text-xl font-bold">9</p>
+                        </div>
+                    </div>
+                    <div class="card p-3">
+                        <i class="fas fa-swimmer text-teal-500 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Resgate em Meio Líquido</h3>
+                            <p class="text-xl font-bold">12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Atendimento Pré-hospitalar -->
+            <div>
+                <h3>Atendimento Pré-hospitalar</h3>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="card p-3">
+                        <i class="fas fa-bandage text-purple-500 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Lesão</h3>
+                            <p class="text-xl font-bold">23</p>
+                        </div>
+                    </div>
+                    <div class="card p-3">
+                        <i class="fas fa-user-injured text-red-400 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Traumas</h3>
+                            <p class="text-xl font-bold">17</p>
+                        </div>
+                    </div>
+                    <div class="card p-3">
+                        <i class="fas fa-ambulance text-red-600 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Emergências Clínicas</h3>
+                            <p class="text-xl font-bold">31</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Outras -->
+            <div>
+                <h3>Outras</h3>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="card p-3">
+                        <i class="fas fa-fish-fins text-gray-600 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Ataque Animal</h3>
+                            <p class="text-xl font-bold">5</p>
+                        </div>
+                    </div>
+                    <div class="card p-3">
+                        <i class="fas fa-ellipsis-h text-gray-500 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold text-sm">Outro</h3>
+                            <p class="text-xl font-bold">7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
