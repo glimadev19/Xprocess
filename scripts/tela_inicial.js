@@ -204,7 +204,19 @@ document.querySelectorAll(".botao-pequeno1").forEach(botao => {
     });
 });
 
-document.getElementById('seta-toggle').addEventListener('click', function() {
+document.getElementById('seta-toggle').addEventListener('click', toggleSeta);
+document.addEventListener('keydown', function(event) {
+    var modal = document.getElementById("novoModal");
+    
+    // Só ativa o toggleSeta se o modal NÃO estiver aberto
+    if (modal.style.display !== "block") {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            toggleSeta();
+        }
+    }
+});
+
+function toggleSeta() {
     var seta = document.getElementById('seta-toggle');
     var containerBotoes = document.querySelector('.container-botoes');
 
@@ -215,10 +227,9 @@ document.getElementById('seta-toggle').addEventListener('click', function() {
         seta.src = './imgs/seta1.png'; // Seta virada para a direita
     } else {
         seta.style.right = '-100px'; // Retorna à posição original
-        seta.src = './imgs/Seta.png'; // Seta virada para a esquerda (ou outra imagem que você preferir)
+        seta.src = './imgs/Seta.png'; // Seta virada para a esquerda
     }
-});
-
+}
 
 document.getElementById("imagem-doce").addEventListener("click", function () {
     document.getElementById("visualizacaoItens").style.display = "none";
@@ -343,18 +354,33 @@ function atualizarModal() {
 }
 
 // Evento para botão "Anterior"
-botaoEsquerda.addEventListener("click", function () {
+botaoEsquerda.addEventListener("click", imagemAnterior);
+botaoDireita.addEventListener("click", imagemProxima);
+
+// Função para imagem anterior
+function imagemAnterior() {
     if (indiceAtual > 0) {
         indiceAtual--;
         atualizarModal();
     }
-});
+}
 
-// Evento para botão "Próximo"
-botaoDireita.addEventListener("click", function () {
+// Função para imagem próxima
+function imagemProxima() {
     if (indiceAtual < imagens.length - 1) {
         indiceAtual++;
         atualizarModal();
+    }
+}
+
+// Adiciona suporte para teclas de seta
+document.addEventListener("keydown", function (event) {
+    if (modal.style.display === "block") { // Apenas se o modal estiver aberto
+        if (event.key === "ArrowLeft") {
+            imagemAnterior();
+        } else if (event.key === "ArrowRight") {
+            imagemProxima();
+        }
     }
 });
 
