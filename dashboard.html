@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Supermercado</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<header>
+    <img class="menu" id="menu-toggle" src="./imgs/menu.png" alt="Ícone de Menu">
+    <div class="empresa">
+        <div class="empresa-user">Empresa</div>
+    </div> 
+    <div class="user-box" id="user-box">
+        <img src="./imgs/user.png" alt="Ícone de Usuário" class="user-box-img">
+    </div>        
+</header>   
+<div class="container">
+    <h1>Dashboard de Vendas</h1>
+    
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Vendas por Departamento</h3>
+            <div class="chart-container">
+                <canvas id="chart1"></canvas>
+            </div>
+            <div class="footer">Últimos 30 dias</div>
+        </div>
+        
+        <div class="grid-item">
+            <h3>Métodos de Pagamento</h3>
+            <div class="chart-container">
+                <canvas id="chart2"></canvas>
+            </div>
+            <div class="footer">Distribuição percentual</div>
+        </div>
+        
+        <div class="grid-item">
+            <h3>Vendas por Hora</h3>
+            <div class="chart-container">
+                <canvas id="chart3"></canvas>
+            </div>
+            <div class="footer">Média diária</div>
+        </div>
+        
+        <div class="grid-item">
+            <h3>Top 5 Produtos</h3>
+            <div class="chart-container">
+                <canvas id="chart4"></canvas>
+            </div>
+            <div class="footer">Mês atual</div>
+        </div>
+        
+        <div class="grid-item">
+            <h3>Clientes por Faixa Etária</h3>
+            <div class="chart-container">
+                <canvas id="chart5"></canvas>
+            </div>
+            <div class="footer">Perfil de compra</div>
+        </div>
+        
+        <div class="grid-item">
+            <h3>Vendas Semanais</h3>
+            <div class="chart-container">
+                <canvas id="chart6"></canvas>
+            </div>
+            <div class="footer">Comparativo semanas</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts/dashboard.js"></script>
+</body>
+</html>
