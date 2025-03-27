@@ -184,11 +184,36 @@ document.querySelectorAll(".botao-li" ).forEach(botao => {
     });
 });
 
+// Adiciona evento de teclado para Ctrl + Z
+document.addEventListener('keydown', function(event) {
+    // Verifica se Ctrl e Z foram pressionados simultaneamente
+    if (event.ctrlKey && event.key === 'z') {
+        event.preventDefault(); // Previne o comportamento padrão do navegador
+        const botaoli = document.querySelector('.botao-li');
+        if (botaoli) {
+            botaoli.click(); // Dispara o clique no botão
+        }
+    }
+});
+
+
 // Adiciona evento de clique ao botão da lixeira para abrir o modal validacaoUsuario
 document.querySelectorAll(".botao-pequeno" ).forEach(botao => {
     botao.addEventListener("click", function () {
         toggleValidacaoUsuarioModal();
     });
+});
+
+// Adiciona evento de teclado para Ctrl + D
+document.addEventListener('keydown', function(event) {
+    // Verifica se Ctrl e D foram pressionados simultaneamente
+    if (event.ctrlKey && event.key === 'd') {
+        event.preventDefault(); // Previne o comportamento padrão do navegador
+        const botaoPequeno = document.querySelector('.botao-pequeno');
+        if (botaoPequeno) {
+            botaoPequeno.click(); // Dispara o clique no botão
+        }
+    }
 });
 
 // Adiciona evento de clique ao botão da lixeira para abrir o modal validacaoUsuario
@@ -202,6 +227,18 @@ document.querySelectorAll(".botao-pequeno1").forEach(botao => {
     botao.addEventListener("click", function () {
         toggleVisualizacaoItensModal();
     });
+});
+
+// Adiciona evento de teclado para Ctrl + V
+document.addEventListener('keydown', function(event) {
+    // Verifica se Ctrl e V foram pressionados simultaneamente
+    if (event.ctrlKey && event.key === 'v') {
+        event.preventDefault(); // Previne o comportamento padrão do navegador
+        const botaoPequeno1 = document.querySelector('.botao-pequeno1');
+        if (botaoPequeno1) {
+            botaoPequeno1.click(); // Dispara o clique no botão
+        }
+    }
 });
 
 document.getElementById('seta-toggle').addEventListener('click', toggleSeta);
@@ -438,6 +475,15 @@ menuToggle.addEventListener("click", function() {
     menuLateral.classList.toggle('aberto'); // Adiciona ou remove a classe "aberto"
 });
 
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.code === 'KeyM') { // ✅ Usando event.code
+        event.preventDefault();
+        const menuToggle = document.getElementById('menu-toggle');
+        if (menuToggle) {
+            menuToggle.click();
+        }
+    }
+});
 // Fechar o modal de Informar Cliente ao clicar fora
 window.onclick = fecharModalPorClique;
 
