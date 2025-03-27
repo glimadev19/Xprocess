@@ -236,3 +236,15 @@ new Chart(ctx6, {
         }
     }
 });
+
+window.contrasteNegativo = function () {
+    if (document.documentElement.classList.contains("contraste-negativo")) {
+        document.documentElement.classList.remove("contraste-negativo");
+    } else {
+        document.documentElement.classList.add("contraste-negativo");
+    }
+};
+
+document.getElementById("toggle-switch").addEventListener("change", function() {
+    contrasteNegativo();
+});
