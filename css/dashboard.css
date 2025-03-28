@@ -88,8 +88,15 @@ input:checked + .slider:before {
     transform: translateX(14px);
 }
 
+/* Classe para inverter todas as cores da página */
 .contraste-negativo {
-    filter: invert(1) hue-rotate(180deg);
+    filter: invert(1);
+}
+
+/* Para evitar que imagens e vídeos também sejam invertidos */
+.contraste-negativo img,
+.contraste-negativo video {
+    filter: invert(1);
 }
 
 .menu {
