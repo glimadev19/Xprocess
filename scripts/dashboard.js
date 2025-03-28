@@ -361,7 +361,7 @@ document.getElementById("period-select").addEventListener("change", function() {
     
     // Configurar toggle de contraste
     document.getElementById("toggle-switch").addEventListener("change", function() {
-        contrasteNegativo();
+        document.documentElement.classList.toggle("contraste-negativo");
     });
 });
 
