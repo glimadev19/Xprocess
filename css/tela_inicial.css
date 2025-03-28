@@ -370,22 +370,22 @@ h4 {
 
 .btn-ajuda {
     display: flex;
-    flex-direction: row;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
     width: 45%;
     height: 3vh;
-    align-items: center;
     background: #ffff;
     border: none;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 15px;
     color: #295B8D;
-    padding: 10px 20px;
     cursor: pointer;
-    margin-left: 1.5rem;
+    margin-left: 0.75rem;
     margin-top: 3rem;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
+    text-align: center; /* Garante centralização do texto */
 }
 
 .btn-ajuda:hover {
