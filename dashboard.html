@@ -27,6 +27,45 @@
 <div class="container">
     <h1>Dashboard de Vendas</h1>
     
+    <!-- Painel de Métricas Compacto -->
+    <div class="compact-metrics">
+        <div class="metric-row">
+            <div class="metric-box">
+                <div class="metric-title">Lucro Total</div>
+                <div class="metric-value" id="total-profit">R$ 2.500,00</div>
+                <div class="metric-change" id="profit-change">↑ 1.67%</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-title">Ticket Médio</div>
+                <div class="metric-value" id="average-ticket">R$ 90,00</div>
+                <div class="metric-change" id="ticket-change">↑ 1.6%</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-title">Total de Vendas</div>
+                <div class="metric-value" id="total-sales">150</div>
+                <div class="metric-change" id="sales-change">↑ 1.25%</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-title">Clientes Atendidos</div>
+                <div class="metric-value" id="total-customers">110</div>
+                <div class="metric-change" id="customers-change">↑ 1.22%</div>
+            </div>
+            
+            <div class="period-selector">
+                <select id="period-select">
+                    <option value="day">Dia</option>
+                    <option value="week" selected>Semana</option>
+                    <option value="month">Mês</option>
+                    <option value="year">Ano</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gráficos -->
     <div class="grid-container">
         <div class="grid-item">
             <h3>Vendas por Departamento</h3>

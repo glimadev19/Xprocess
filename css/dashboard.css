@@ -148,8 +148,117 @@ input:checked + .slider:before {
     text-align: right;
 }
 
+/* Painel de Métricas Compacto */
+.compact-metrics {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.dark-mode .compact-metrics {
+    background: #444;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.metric-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.metric-box {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    border-right: 1px solid #eee;
+}
+
+.dark-mode .metric-box {
+    border-right-color: #555;
+}
+
+.metric-box:last-child {
+    border-right: none;
+}
+
+.metric-title {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.dark-mode .metric-title {
+    color: #adb5bd;
+}
+
+.metric-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #343a40;
+    margin: 5px 0;
+}
+
+.dark-mode .metric-value {
+    color: #f8f9fa;
+}
+
+.metric-change {
+    font-size: 0.8rem;
+    color: #28a745;
+}
+
+.metric-change.negative {
+    color: #dc3545;
+}
+
+.period-selector {
+    min-width: 120px;
+}
+
+.period-selector select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 0.9rem;
+}
+
+.dark-mode .period-selector select {
+    background: #555;
+    border-color: #666;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
+    }
+    .metric-box {
+        min-width: calc(50% - 20px);
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    
+    .dark-mode .metric-box {
+        border-bottom-color: #555;
+    }
+    
+    .metric-box:nth-child(even) {
+        border-left: 1px solid #eee;
+        padding-left: 15px;
+    }
+    
+    .dark-mode .metric-box:nth-child(even) {
+        border-left-color: #555;
+    }
+    
+    .period-selector {
+        width: 100%;
+        margin-top: 10px;
     }
 }
