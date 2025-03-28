@@ -362,7 +362,7 @@ h4 {
 
 .area-item img {
     position: absolute;
-    bottom: 5rem; /* Distância do fundo */
+    bottom: 8rem; /* Distância do fundo */
     right: 10px; /* Distância da lateral */
     width: 6.8rem; /* Ajuste o tamanho conforme necessário */
     height: auto;
@@ -396,7 +396,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: -400px; /* Ajuste esse valor conforme necessário */
+    margin-top: -28rem; /* Ajuste esse valor conforme necessário */
 }
 
 .informacoes-produto p {

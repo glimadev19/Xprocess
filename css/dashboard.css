@@ -9,6 +9,23 @@ body {
     background-color: #f5f5f5;
 }
 
+.seta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.seta img {
+    width: 24px;
+    height: 24px;
+}
+
+.seta p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 header {
     
     background-color: #295B8D;
