@@ -336,6 +336,8 @@ function initCharts() {
     });
 }
 
+let contrast = 100;
+
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar gráficos
@@ -344,32 +346,48 @@ document.addEventListener('DOMContentLoaded', function() {
     // Atualizar métricas e gráficos com o período padrão (dia)
     updateMetrics(currentPeriod);
     
-   // No seu dashboard.js, substitua o código do seletor de período por:
-
-// Configurar seletor de período
-document.getElementById("period-select").addEventListener("change", function() {
-    // Remover classe active de todos os botões (se ainda existirem)
-    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-    
-    // Atualizar período atual
-    currentPeriod = this.value;
-    
-    // Atualizar métricas e gráficos
-    updateMetrics(currentPeriod);
-    updateCharts(currentPeriod);
-});
+    // Configurar seletor de período
+    document.getElementById("period-select").addEventListener("change", function() {
+        // Remover classe active de todos os botões (se ainda existirem)
+        document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+        
+        // Atualizar período atual
+        currentPeriod = this.value;
+        
+        // Atualizar métricas e gráficos
+        updateMetrics(currentPeriod);
+        updateCharts(currentPeriod);
+    });
     
     // Configurar toggle de contraste
     document.getElementById("toggle-switch").addEventListener("change", function() {
-        contrasteNegativo();
+        // Alterar o contraste ao ativar/desativar o switch
+        if (this.checked) {
+            aumentarContraste();  // Aumenta o contraste
+        } else {
+            resetarContraste();  // Reseta o contraste
+        }
     });
 });
 
-// Função de contraste negativo
-window.contrasteNegativo = function () {
-    if (document.documentElement.classList.contains("contraste-negativo")) {
-        document.documentElement.classList.remove("contraste-negativo");
-    } else {
-        document.documentElement.classList.add("contraste-negativo");
+// Função para aumentar o contraste
+function aumentarContraste() {
+    const elementos = document.querySelectorAll('body *');
+    if (contrast < 300) { // Impede que o contraste ultrapasse 300%
+        contrast += 20;
     }
-};
+
+    elementos.forEach((elemento) => {
+        elemento.style.filter = `contrast(${contrast}%)`;
+    });
+}
+
+// Função para resetar o contraste
+function resetarContraste() {
+    const elementos = document.querySelectorAll('body *');
+    contrast = 100; // Restaura o contraste para o valor original (100%)
+    
+    elementos.forEach((elemento) => {
+        elemento.style.filter = `contrast(${contrast}%)`;
+    });
+}
