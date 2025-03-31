@@ -26,8 +26,7 @@ body {
     font-size: 1rem;
 }
 
-header {
-    
+header { 
     background-color: #295B8D;
     color: white;
     display: flex;
@@ -86,10 +85,6 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(14px);
-}
-
-.contraste-negativo {
-    filter: invert(1) hue-rotate(180deg);
 }
 
 .menu {
