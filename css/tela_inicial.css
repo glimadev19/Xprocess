@@ -747,6 +747,7 @@ h4 {
     cursor: pointer;
     font-size: 1rem;
     margin-right: 4rem;
+    margin-left:1.5rem;
 }
 
 .esc10-btn:hover {
@@ -807,7 +808,7 @@ h4 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin-left: 6rem;
+    margin-top: 13.8rem;
     }
     
     .enter10-btn:hover {
@@ -816,32 +817,31 @@ h4 {
 
 .limpar-btn{
     padding: 10px 20px;
+    background-color: #295B8D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+        
+    .limpar-btn:hover {
+        background-color: #295B8D;
+    }
+
+.gravar-btn{
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    
     }
-        
-    .limpar-btn:hover {
+            
+    .gravar-btn:hover {
         background-color: #45a049;
     }
-
-.gravar-btn{
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        }
-            
-        .gravar-btn:hover {
-            background-color: #45a049;
-        }
     
 
 
