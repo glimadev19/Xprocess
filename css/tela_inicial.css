@@ -677,7 +677,7 @@ h4 {
     background-color: #45a049;
 }
 
-.esc-btn {
+.esc1-btn {
     padding: 10px 20px;
     background-color: #d40606;
     color: white;
@@ -685,12 +685,165 @@ h4 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin-left: 1.5rem;
+    margin-right: 3.0rem;
 }
 
-.esc-btn:hover {
+.esc1-btn:hover {
     background-color: #d40606;
 }
+
+.esc2-btn {
+    padding: 10px 20px;
+    background-color: #d40606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 4rem;
+    margin-left: 2.5rem;
+}
+
+.esc2-btn:hover {
+    background-color: #d40606;
+}
+
+.esc7-btn {
+    padding: 10px 20px;
+    background-color: #d40606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 4rem;
+}
+
+.esc7-btn:hover {
+    background-color: #d40606;
+}
+
+.esc9-btn {
+    padding: 10px 20px;
+    background-color: #d40606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 4rem;
+}
+
+.esc9-btn:hover {
+    background-color: #d40606;
+}
+
+.esc10-btn {
+    padding: 10px 20px;
+    background-color: #d40606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 4rem;
+    margin-left:1.5rem;
+}
+
+.esc10-btn:hover {
+    background-color: #d40606;
+}
+
+.enter1-btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 3rem;
+    margin-right: 5rem;
+    }
+        
+    .enter1-btn:hover {
+        background-color: #45a049;
+    }
+        
+.enter7-btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left:3rem;
+    }
+            
+    .enter7-btn:hover {
+        background-color: #45a049;
+    }
+        
+.enter10-btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 6rem;
+    }
+    
+    .enter10-btn:hover {
+        background-color: #45a049;
+    }
+
+.enter10-btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 13.8rem;
+    }
+    
+    .enter10-btn:hover {
+        background-color: #45a049;
+    }
+
+.limpar-btn{
+    padding: 10px 20px;
+    background-color: #295B8D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+        
+    .limpar-btn:hover {
+        background-color: #295B8D;
+    }
+
+.gravar-btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+            
+    .gravar-btn:hover {
+        background-color: #45a049;
+    }
+    
+
 
 .total p {
     font-size: 18px;

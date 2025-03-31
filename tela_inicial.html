@@ -171,7 +171,9 @@
                 <input type="text" class="input-field" placeholder="Digite a Data e Horário" />
                 </div>
                 <div class="instructions">
-                    <strong>ESC = FECHAR</strong>
+                    <div class="esc-container">
+                        <button class="esc1-btn">ESC = Cancelar Pagamento</button>
+                    </div>
                 </div>
             </div>
 
@@ -187,7 +189,9 @@
                     <input type="text" class="input-field" placeholder="Digite o saldo" />
                 </div>
                 <div class="instructions">
-                    <strong>ENTER = ABRIR CAIXA</strong>
+                </div>
+                <button class="enter1-btn">ENTER = Abrir Caixa</button>
+            </div>
                 </div>
             </div>
             <!-- Botão Fechar Caixa -->
@@ -216,8 +220,8 @@
                     <p><strong>Data/Horário</strong></p>
                 <input type="text" class="input-field" placeholder="Digite a Data e Horário" />
                 </div>
-                <div class="instructions">
-                    <strong>ESC = FECHAR</strong>
+                <div class="esc-container">
+                    <button class="esc1-btn">ESC = Cancelar Pagamento</button>
                 </div>
             </div>
 
@@ -233,7 +237,9 @@
                     <input type="text" class="input-field" placeholder="Digite o saldo" />
                 </div>
                 <div class="instructions">
-                    <strong>ENTER = ABRIR CAIXA</strong>
+                </div>
+                <button class="enter1-btn">ENTER = Abrir Caixa</button>
+            </div>
                 </div>
             </div>
         </div>
@@ -274,7 +280,7 @@
                 </div>
                 <!-- Valor e botão "Finalizar Venda" -->
                 <div class="esc-container">
-                    <button class="esc-btn">ESC = Cancelar Pagamento</button>
+                    <button class="esc2-btn">ESC = Cancelar Pagamento</button>
                 </div>
                 </div>
 
@@ -454,29 +460,36 @@
                 </div>
 
                 <div class="instructions">
-                    <strong>ESC = Rejeitar</strong>
-                    <strong>ENTER = Selecionar Produto</strong>
+                    <div class="esc-container">
+                        <button class="esc10-btn">ESC = Cancelar Pagamento</button>
+                    </div>
                 </div>
             </div>
+            
 
+           
             <!-- Coluna da Direita -->
-            <div class="modal-right">
-                <div class="modal-section">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Código</th>
-                                <th>Cód. de Barras</th>
-                                <th>Descrição</th>
-                                <th>Valor</th>
-                            </tr>
-                        </thead>
-                    </table>
+           <div class="modal-right">
+                <div class="horizontal-box">
+                    <div>
+                        <p><strong>Código</strong></p>
+                    </div>
+                    <div>
+                        <p><strong>Código de Barras</strong></p>
+                    </div>
+                    <div>
+                        <p><strong>Descrição</strong></p>
+                    </div>
+                    <div>
+                        <p><strong>Valor</strong></p>
+                    </div>
                 </div>
-            </div>
+                        <button class="enter10-btn">ENTER = Selecionar Produto</button>
         </div>
     </div>
 </div>
+</div>
+
 
 <!-- Modal de Carga Completa -->
 <div id="cargaCompletaModal" class="modal">
@@ -496,7 +509,9 @@
         <div class="modal-footer">
             <button id="simBtn">Sim</button>
             <button id="naoBtn">Não</button>
-            <strong>ESC = Fechar</strong>
+            <div class="esc-container">
+                <button class="esc-btn">ESC = Cancelar Pagamento</button>
+            </div>
         </div>
     </div>
 </div>
@@ -577,9 +592,9 @@
 
         <!-- Rodapé do Modal -->
         <div class="modal-footer">
-            <button id="limparBtn">Limpar Informações</button>
-            <button id="gravarBtn">Gravar</button>
-            <strong>ESC = Fechar</strong>
+            <button class="limpar-btn">Limpar Informações</button>
+            <button class="gravar-btn">Gravar</button>
+            <button class="esc9-btn">ESC = Cancelar Pagamento</button>
         </div>
     </div>
 </div>
@@ -597,8 +612,10 @@
             <div class="vendedores-item">4 | Vendedor 4</div>
         </div>
         <div class="modal-footer">
-            <div class="instruction left">ESC = Fechar</div>
-            <div class="instruction right">ENTER = Selecionar Vendedor</div>
+            <div class="esc-container">
+                <button class="esc7-btn">ESC = Cancelar Pagamento</button>
+            </div>
+            <button class="enter7-btn">ENTER = Selecionar Vendedor</button>
         </div>
     </div>
 </div>
