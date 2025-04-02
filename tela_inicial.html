@@ -11,32 +11,38 @@
 
 <body>
     <header>
-        <img class="menu" id="menu-toggle" src="./imgs/menu.png" alt="Ícone de Menu">
-        <div class="empresa">
-            <div class="empresa-user">Empresa</div>
-        </div>
+    <img class="menu" id="menu-toggle" src="./imgs/menu.png" alt="Ícone de Menu">
+    <div class="empresa">
+        <div class="empresa-user">Empresa</div>
+    </div>
+    <div class="header-right">
+        <label class="switch">
+            <input type="checkbox" id="toggle-switch">
+            <span class="slider round"></span>
+        </label>
         <img class="user" id="user-icon" src="./imgs/user-tela-inicial.png" alt="Ícone de Usuário">
-        
-        <!-- Caixa oculta inicialmente -->
-        <div class="user-box" id="user-box">
-            <img src="./imgs/user-icon.png" alt="Ícone de Usuário" class="user-box-img">
-        
-            <div class="user-option">
-                <img src="./imgs/dashboard-icon.png" alt="Ícone Dashboard">
-                <p onclick="window.location.href='dashboard.html'" style="cursor: pointer;">Dashboard</p>
-            </div>
-        
-            <div class="user-option">
-                <img src="./imgs/relatórios-icon.png" alt="Ícone Relatórios">
-                <p>Relatórios</p>
-            </div>
-        
-            <div class="user-option">
-                <img src="./imgs/alterar-icon.png" alt="Ícone Alterar Senha">
-                <p>Alterar Senha</p>
-            </div>
-        </div>        
-    </header>    
+    </div>
+    
+    <!-- Caixa oculta inicialmente -->
+    <div class="user-box" id="user-box">
+        <img src="./imgs/user-icon.png" alt="Ícone de Usuário" class="user-box-img">
+    
+        <div class="user-option">
+            <img src="./imgs/dashboard-icon.png" alt="Ícone Dashboard">
+            <p onclick="window.location.href='dashboard.html'" style="cursor: pointer;">Dashboard</p>
+        </div>
+    
+        <div class="user-option">
+            <img src="./imgs/relatórios-icon.png" alt="Ícone Relatórios">
+            <p>Relatórios</p>
+        </div>
+    
+        <div class="user-option">
+            <img src="./imgs/alterar-icon.png" alt="Ícone Alterar Senha">
+            <p>Alterar Senha</p>
+        </div>
+    </div>        
+</header>    
 
     <div id="menu-lateral" class="menu-lateral">
         <h2>Menu</h2>
@@ -508,8 +514,8 @@
         <!-- Rodapé do Modal -->
         <div class="modal-footer">
             <button class="sim-btn">Sim</button>
-            <button class="nao-btn">Não</button>
             <button class="esc12-btn">ESC = Cancelar Pagamento</button>
+            <button class="nao-btn">Não</button>
         </div>
     </div>
 </div>
@@ -649,7 +655,7 @@
         <p>Preço Unitário</p>
         <input type="text" class="input-preco">
     
-        <p>Desconto - F8</p>
+        <p>Desconto</p>
         <input type="text" class="input-desconto">
     </div>
         <div class="final-icons">
