@@ -229,6 +229,18 @@ document.querySelectorAll(".botao-pequeno1").forEach(botao => {
     });
 });
 
+// Adiciona evento de teclado para Ctrl + A
+document.addEventListener('keydown', function(event) {
+    // Verifica se Ctrl e A foram pressionados simultaneamente
+    if (event.ctrlKey && event.key === 'a') {
+        event.preventDefault(); // Previne o comportamento padrão do navegador
+        const btnajuda = document.querySelector('.btn-ajuda');
+        if (btnajuda) {
+            btnajuda.click(); // Dispara o clique no botão
+        }
+    }
+});
+
 // Adiciona evento de teclado para Ctrl + V
 document.addEventListener('keydown', function(event) {
     // Verifica se Ctrl e V foram pressionados simultaneamente
