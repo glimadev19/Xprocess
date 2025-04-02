@@ -338,7 +338,6 @@ function initCharts() {
 
 let contrast = 100;
 
-// Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar gráficos
     initCharts();
@@ -348,35 +347,38 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Configurar seletor de período
     document.getElementById("period-select").addEventListener("change", function() {
-        // Remover classe active de todos os botões (se ainda existirem)
         document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-        
-        // Atualizar período atual
         currentPeriod = this.value;
-        
-        // Atualizar métricas e gráficos
         updateMetrics(currentPeriod);
         updateCharts(currentPeriod);
     });
     
     // Configurar toggle de contraste
-    document.getElementById("toggle-switch").addEventListener("change", function() {
-        // Alterar o contraste ao ativar/desativar o switch
+    const toggleSwitch = document.getElementById("toggle-switch");
+    toggleSwitch.addEventListener("change", function() {
         if (this.checked) {
-            aumentarContraste();  // Aumenta o contraste
+            aumentarContraste();
         } else {
-            resetarContraste();  // Reseta o contraste
+            resetarContraste();
         }
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', this.checked);
     });
+
+    // Verificar preferência salva de dark mode
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        toggleSwitch.checked = true;
+        aumentarContraste(); // Aplica o contraste imediatamente ao carregar
+    }
 });
 
 // Função para aumentar o contraste
 function aumentarContraste() {
     const elementos = document.querySelectorAll('body *');
-    if (contrast < 300) { // Impede que o contraste ultrapasse 300%
+    if (contrast < 300) {
         contrast += 20;
     }
-
     elementos.forEach((elemento) => {
         elemento.style.filter = `contrast(${contrast}%)`;
     });
@@ -385,8 +387,7 @@ function aumentarContraste() {
 // Função para resetar o contraste
 function resetarContraste() {
     const elementos = document.querySelectorAll('body *');
-    contrast = 100; // Restaura o contraste para o valor original (100%)
-    
+    contrast = 100;
     elementos.forEach((elemento) => {
         elemento.style.filter = `contrast(${contrast}%)`;
     });

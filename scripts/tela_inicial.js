@@ -487,6 +487,40 @@ menuToggle.addEventListener("click", function() {
     menuLateral.classList.toggle('aberto'); // Adiciona ou remove a classe "aberto"
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSwitch = document.getElementById('toggle-switch');
+    
+    toggleSwitch.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', this.checked);
+    });
+
+    // Verificar preferência salva de dark mode
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        toggleSwitch.checked = true;
+    }
+
+    // Botão de voltar
+    const seta = document.querySelector('.seta');
+    if (seta) {
+        seta.addEventListener('click', function() {
+            window.location.href = 'tela_inicial.html';
+        });
+    }
+
+    // Menu do usuário
+    const userBox = document.getElementById('user-box');
+    if (userBox) {
+        userBox.addEventListener('click', function() {
+            console.log('Menu do usuário clicado');
+        });
+    }
+
+    // Garante que o modal comece fechado
+    document.getElementById("modalNota").style.display = "none";
+});
+
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.code === 'KeyM') { // ✅ Usando event.code
         event.preventDefault();
@@ -525,10 +559,6 @@ document.addEventListener("keydown", function (event) {
     } else if (event.key === "+" || event.key === "=") { // "=" porque no teclado numérico ABNT2 "+" está no shift do "="
         alterarQuantidade(1);
     }
-});
-// Garante que o modal comece fechado
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("modalNota").style.display = "none";
 });
 
 function gerarNotaFiscal() {
