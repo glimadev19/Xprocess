@@ -229,6 +229,18 @@ document.querySelectorAll(".botao-pequeno1").forEach(botao => {
     });
 });
 
+// Adiciona evento de teclado para Ctrl + A
+document.addEventListener('keydown', function(event) {
+    // Verifica se Ctrl e A foram pressionados simultaneamente
+    if (event.ctrlKey && event.key === 'a') {
+        event.preventDefault(); // Previne o comportamento padrão do navegador
+        const btnajuda = document.querySelector('.btn-ajuda');
+        if (btnajuda) {
+            btnajuda.click(); // Dispara o clique no botão
+        }
+    }
+});
+
 // Adiciona evento de teclado para Ctrl + V
 document.addEventListener('keydown', function(event) {
     // Verifica se Ctrl e V foram pressionados simultaneamente
@@ -475,6 +487,40 @@ menuToggle.addEventListener("click", function() {
     menuLateral.classList.toggle('aberto'); // Adiciona ou remove a classe "aberto"
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSwitch = document.getElementById('toggle-switch');
+    
+    toggleSwitch.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', this.checked);
+    });
+
+    // Verificar preferência salva de dark mode
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        toggleSwitch.checked = true;
+    }
+
+    // Botão de voltar
+    const seta = document.querySelector('.seta');
+    if (seta) {
+        seta.addEventListener('click', function() {
+            window.location.href = 'tela_inicial.html';
+        });
+    }
+
+    // Menu do usuário
+    const userBox = document.getElementById('user-box');
+    if (userBox) {
+        userBox.addEventListener('click', function() {
+            console.log('Menu do usuário clicado');
+        });
+    }
+
+    // Garante que o modal comece fechado
+    document.getElementById("modalNota").style.display = "none";
+});
+
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.code === 'KeyM') { // ✅ Usando event.code
         event.preventDefault();
@@ -513,10 +559,6 @@ document.addEventListener("keydown", function (event) {
     } else if (event.key === "+" || event.key === "=") { // "=" porque no teclado numérico ABNT2 "+" está no shift do "="
         alterarQuantidade(1);
     }
-});
-// Garante que o modal comece fechado
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("modalNota").style.display = "none";
 });
 
 function gerarNotaFiscal() {
