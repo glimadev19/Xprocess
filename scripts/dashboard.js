@@ -17,6 +17,17 @@ function getRandomColors(length) {
     });
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.code === 'KeyC') { // ✅ Usando event.code
+        event.preventDefault();
+        const toggleswitch = document.getElementById('toggle-switch');
+        if (toggleswitch) {
+            toggleswitch.click();
+        }
+    }
+});
+
+
 // Função para atualizar métricas baseadas no período
 function updateMetrics(period) {
     const metrics = {
