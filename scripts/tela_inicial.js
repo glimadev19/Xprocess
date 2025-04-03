@@ -265,20 +265,21 @@ document.addEventListener('keydown', function(event) {
              window.getComputedStyle(modalItens).display !== 'none');
 
         if (modalEstaAberto) {
-            // Abre diretamente o modal expandido com a imagem da Fini
+            // Fecha TODOS os modais abertos (incluindo visualizacaoItens)
+            fecharModaisAbertos();
+            
+            // Abre o modal expandido com a imagem da Fini
             const novomodal = document.getElementById('novoModal');
             const imagemExpandida = document.getElementById('imagemExpandida');
             const nomeImagem = document.getElementById('nomeImagem');
             const tituloImagem = document.getElementById('tituloImagem');
 
             if (novomodal && imagemExpandida && nomeImagem && tituloImagem) {
-                // Define a imagem e os textos no modal expandido
-                imagemExpandida.src = './imgs/doce.png'; // Caminho da imagem da Fini
-                nomeImagem.textContent = 'Beijos - Fini'; // Nome editável
-                tituloImagem.textContent = 'Visualização de Itens'; // Título do modal
-
-                // Abre o modal expandido (ajuste conforme sua lógica de abertura)
+                imagemExpandida.src = './imgs/doce.png'; // Imagem da Fini
+                nomeImagem.textContent = 'Beijos - Fini';
+                tituloImagem.textContent = 'Visualização de Itens';
                 novomodal.style.display = 'block';
+                isnovoModal = true; // Atualiza o estado do modal
             }
         }
     }
