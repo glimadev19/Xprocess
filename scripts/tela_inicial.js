@@ -253,6 +253,37 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+document.addEventListener('keydown', function(event) {
+    // Verifica se Ctrl + I foi pressionado
+    if (event.ctrlKey && event.key.toLowerCase() === 'i') {
+        event.preventDefault(); // Evita abrir o "Inspecionar Elemento" do navegador
+
+        // Verifica se o modal de visualização de itens está aberto
+        const modalItens = document.getElementById('visualizacaoItens');
+        const modalEstaAberto = modalItens && 
+            (modalItens.style.display === 'block' || 
+             window.getComputedStyle(modalItens).display !== 'none');
+
+        if (modalEstaAberto) {
+            // Abre diretamente o modal expandido com a imagem da Fini
+            const novomodal = document.getElementById('novoModal');
+            const imagemExpandida = document.getElementById('imagemExpandida');
+            const nomeImagem = document.getElementById('nomeImagem');
+            const tituloImagem = document.getElementById('tituloImagem');
+
+            if (novomodal && imagemExpandida && nomeImagem && tituloImagem) {
+                // Define a imagem e os textos no modal expandido
+                imagemExpandida.src = './imgs/doce.png'; // Caminho da imagem da Fini
+                nomeImagem.textContent = 'Beijos - Fini'; // Nome editável
+                tituloImagem.textContent = 'Visualização de Itens'; // Título do modal
+
+                // Abre o modal expandido (ajuste conforme sua lógica de abertura)
+                novomodal.style.display = 'block';
+            }
+        }
+    }
+});
+
 document.getElementById('seta-toggle').addEventListener('click', toggleSeta);
 document.addEventListener('keydown', function(event) {
     var modal = document.getElementById("novoModal");
