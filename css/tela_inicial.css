@@ -8,7 +8,6 @@ body {
 
 body.dark-mode {
     background-color: #222;
-    color: #f5f5f5;
 }
 
 /* Estilo do header */
@@ -142,8 +141,8 @@ input:checked + .slider:before {
     height: 26px; /* Ajuste da altura da logo */
     cursor: pointer;
 }
+
 #menu-lateral {
-    cursor: pointer;
     position: absolute;
     top: 90px; /* Ajuste para ficar abaixo do header */
     left: -250px; /* Inicialmente fora da tela */
@@ -160,6 +159,11 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Garante que o conteúdo fique dentro do menu */
+}
+
+.dark-mode #menu-lateral {
+    background-color: black;
+    border: 2px solid #e7e7e7;
 }
 
 /* Quando o menu estiver aberto */
@@ -291,13 +295,15 @@ h4 {
 }
 
 .dark-mode .seta {
-    background-color: white;
+    background-color: black;
+    border: 1px solid #e7e7e7;
 }
 
 #menu-container {
     position: relative; /* Isso é essencial para o posicionamento da seta */
     display: inline-block; /* Ou outro valor, dependendo do layout */
 }
+
 .botao-com-imagens {
     display: flex;
     flex-direction: column;
@@ -313,6 +319,10 @@ h4 {
     width: 124px;
     height: 7rem;
     overflow: hidden;
+}
+
+.dark-mode .botao-com-imagens {
+    background-color: black;
 }
 
 .botao-com-imagens:hover {
@@ -352,6 +362,10 @@ h4 {
     gap: 15px;
 }
 
+.dark-mode .caixa-descricao {
+    background-color: #414b55;
+}
+
 .caixa-descricao p {
     margin: 10px 0; /* Espaçamento entre as frases */
     font-size: 18px; /* Ajuste o tamanho do texto conforme necessário */
@@ -359,6 +373,10 @@ h4 {
     position: relative;
     left: 0px; /* Ajuste a posição se necessário */
     color: #295B8D;
+}
+
+.dark-mode .caixa-descricao p {
+    color: white;
 }
 
 /* Estiliza os botões */
@@ -387,6 +405,10 @@ h4 {
     padding: 5px;
 }
 
+.dark-mode .botao-pequeno {
+    background-color: black;
+}
+
 .botao-pequeno img {
     width: 23px;
     height: 23px;
@@ -407,6 +429,10 @@ h4 {
     padding: 5px;
 }
 
+.dark-mode .botao-pequeno1 {
+    background-color: black;
+}
+
 .botao-pequeno1 img {
     width: 23px;
     height: 23px;
@@ -423,6 +449,10 @@ h4 {
     overflow-y: auto; /* Adiciona rolagem se necessário */
     display: flex;
     flex-direction: column;
+}
+
+.dark-mode .area-item {
+    background-color: #444
 }
 
 .area-item img {
@@ -451,6 +481,10 @@ h4 {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
     text-align: center; /* Garante centralização do texto */
+}
+
+.dark-mode .btn-ajuda {
+    background: black;
 }
 
 .btn-ajuda:hover {
@@ -482,6 +516,12 @@ h4 {
     margin-top: 0; /* Remove qualquer espaçamento extra acima do input */
 }
 
+.dark-mode .informacoes-produto input {
+    background-color: black;
+    border: 1px solid #e7e7e7;
+    color: white;
+}
+
 .espaco-em-branco {
     height: 15rem; /* Ajuste a altura conforme necessário */
     width: 100%; /* Preenche toda a largura disponível */
@@ -489,6 +529,10 @@ h4 {
     background-color: white;
     border-radius: 15px;
     position: relative; /* Necessário para usar o posicionamento absoluto dentro dela */
+}
+
+.dark-mode .espaco-em-branco {
+    background-color: black;
 }
 
 .espaco-em-branco p {
@@ -517,6 +561,11 @@ h4 {
     color: #295B8D;
     font-weight: bold;
     font-size: 1.8rem;
+}
+
+.dark-mode #quantidade {
+    background-color: #525e6b;
+    color: white;
 }
 
 .menos-botao {
@@ -584,6 +633,10 @@ h4 {
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5); /* Efeito ao passar o mouse */
 }
 
+.dark-mode .botao-imagem {
+    background-color: black;
+}
+
 .botao-imagem img {
     max-width: 34px; /* Ajuste o tamanho da imagem conforme necessário */
     height: auto;
@@ -609,6 +662,11 @@ h4 {
     justify-content: center;
 }
 
+.dark-mode .botao-li {
+    background-color: rgb(10, 10, 10);
+    border: 2px solid #e7e7e7;
+}
+
 .botao-li img {
     max-width: 34px; 
     height: auto;
@@ -629,6 +687,10 @@ h4 {
     color: white;
     position: relative;
     left: 45rem; /* Ajuste para alinhar com o h3 */
+}
+
+.dark-mode .caixa-total {
+    background-color: #0e2135; /* Mesma cor de fundo */
 }
 
 .caixa-total p {
